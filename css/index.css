@@ -1,0 +1,25 @@
+/*****
+*MAIN*
+******/
+
+/*******
+*FOOTER*
+********/
+footer{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0px;
+}
+
+.hovericon> li > a:hover{
+    transition: 0.5s all;
+    transform: scale(1.2);
+    color: black;
+}
+/*
+.hovericon> li:hover> a::after{    
+    content: "🎥";
+}
+*/
