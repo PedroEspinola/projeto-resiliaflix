@@ -48,11 +48,15 @@
     </header><!--/Header-->
 
     <main>
+      <section class="container"><!--Carrousel de destaques? 🤔 thinkin-->
+          
+      </section>
+
         <section class="container"><!--Formulario-->
           <h2 class="text-secondary text-muted">Preencha o formulario para efetivar seu cadastro!</h2>
             <form action="">
               
-              <div class="row justify-content-center">
+              <div class="row justify-content-center"><!--Info pessoais-->
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome"> Nome:</label>
                   <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus maxlength="50">
@@ -70,6 +74,7 @@
                   <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required maxlength="11">
                 </div>
               </div>
+
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Tel/Cel:</label>
@@ -90,7 +95,7 @@
                     <option value="">Genero não-Binário</option>
                   </select>
                 </div>
-                <div class="form-group col-12 col-md-6 col-lg-3">
+                <div class="form-group col-12 col-md-6 col-lg-3 mb-5">
                   <label for="estciv">Estado Civil:</label>
                   <select class="form-control" name="estciv" id="estciv">
                     <option value="">Escolha</option>
@@ -100,14 +105,61 @@
                     <option value="">Viuv(a)</option>
                   </select>
                 </div>
+                
+                <hr>
+              </div><!-- Info Pessoais-->
+
+              <div class="row"><!--Endereço-->
+                <h4 class="text-secondary">Informe seu CEP e Confirme seu endereço:</h4>
+
+                <div class="form-group  col-12 col-md-6 " >
+                  <label for="">CEP:</label>
+                  <input class="form-control" type="text" name="cep" id="cep" placeholder="00000000" maxlength="8">
+                </div>
+               
+                <div class="form-group mt-2 col-12 col-md-6 align-self-center">
+                  <button class="btn btn-outline-success mt-3 " type="submit" onclick="pesquisaCEP()">Pesquisar Cep 🔍</button>
+                  <button class="btn btn-outline-danger mt-3 " type="submit" onclick="limparCEP()">Limpar Endereço 🧹</button>
+                  <button class="btn btn-outline-danger mt-3 " type="submit" onclick="limparCampos()">Limpar Tudo 🗑️</button>
+                </div>
+                
               </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Rua:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Numero:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+              
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Complemento:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Bairro:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+                 
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Cidade:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="">Estado:</label>
+                  <input class="form-control" disabled type="text" name="" id="">
+                </div>
+                
+                <div class="form-group mt-2 col-12 align-self-center">
+                  <button class="btn btn-outline-success col-12 mt-1 " type="submit" onclick="cadastrar()">Cadastrar 🧍✔️</button>  
+                </div>
+              </div><!--/Endereço-->
             </form>
 
         </section><!--/Formulario-->
-
-        <section class="container"><!--Endereço -->
-
-        </section><!--/Endereço-->
 
     </main>
 
@@ -119,7 +171,7 @@
                 <div class="d-flex col-3 col3md-2 align-self-center  " >
                     <a href="index.html"><img src="img/logo/logo.png" width="70"></a>
                 </div>
-                <div class="col-3 col-md-2 d-flex align-self-center mt-auto ">
+                <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
                   <h6><a class="text-secondary nav-link" href="index.html">ResiliaFlix</a></h6>
                 </div>
             </div>
