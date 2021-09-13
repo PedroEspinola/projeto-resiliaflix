@@ -1,9 +1,51 @@
-/*  ESTILIZAR -- 
-.contatos(container)
-.titulo (titulo pagina)
-.integrante (escopo div integrantes)
-.nomeDev (nome integrantes)
-.foto (estilo foto)
-.link (estilo botao link)*/
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+.contatos{     /*(container)*/
+    height: 100vh;
+    width: 100vw;
+    border: solid red 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo{
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    border: red solid 3px;
+}
+
+.integrante{
+    height: 60%;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid black;
+}
+.nomeDev{
+    text-align: center;
+    font-size:x-large;
+}
+
+.foto {    /*(estilo foto)*/
+    height: 60%;
+    width: 17vw;
+    align-self: center;
+    
+}
+
+
+.link{
+    border: solid black 3px;
+    align-self: center;
+    width: 30%;
+    text-decoration: none;
+    
+}
+/* AGORA É SÓ FAZER O MSM LAYOUT COM BOOTSTRAP */
+
+
+
