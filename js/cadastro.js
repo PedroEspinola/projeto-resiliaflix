@@ -25,7 +25,7 @@ var cep = $('#cep').val();
             async: false,
         }).responseJSON;
 
-        $('#cep').val(`${reqcep.cep}`);
+       
         $('#rua').val(`${reqcep.logradouro}`);
         $('#num').prop('disabled', false);
         $('#comp').prop('disabled', false); 
