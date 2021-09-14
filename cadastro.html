@@ -73,14 +73,14 @@
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">CPF:</label>
-                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11">
+                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Tel/Cel:</label>
-                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11">
+                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Email:</label>
@@ -116,7 +116,7 @@
 
                 <div class="form-group  col-12 col-md-6 " >
                   <label for="">CEP:</label>
-                  <input class="form-control" type="text" name="cep" id="cep" placeholder="00000000" size="8" maxlength="8">
+                  <input class="form-control" type="number" name="cep" id="cep" placeholder="00000000" size="8" maxlength="8">
                 </div>
                
                 <div class="form-group mt-2 col-12 col-md-6 align-self-center">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-4">
                   <label for="num">Numero:</label>
-                  <input class="form-control" disabled type="text" name="num" id="num">
+                  <input class="form-control" disabled type="text" name="num" id="num" onkeyup="somenteNumeros(this)">
                 </div>
               
                 <div class="form-group col-12 col-md-6 col-lg-4">
