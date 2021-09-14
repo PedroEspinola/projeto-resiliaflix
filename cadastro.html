@@ -17,6 +17,8 @@
  
      <!--Icon-->
      <link rel="shortcut icon" href="img/logo/icone.png" type="image/x-icon">
+
+     <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
 
@@ -59,11 +61,11 @@
               <div class="row justify-content-center"><!--Info pessoais-->
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome"> Nome:</label>
-                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus maxlength="50">
+                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus size="50" maxlength="50">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Sobrenome:</label>
-                  <input class="form-control" type="text" name="snome" id="snome" placeholder="José Maria" required maxlength="50">
+                  <input class="form-control" type="text" name="snome" id="snome" placeholder="José Maria" required size="50" maxlength="50">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Data de Nascimento:</label>
@@ -71,38 +73,38 @@
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">CPF:</label>
-                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required maxlength="11">
+                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11">
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Tel/Cel:</label>
-                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required maxlength="11">
+                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Email:</label>
-                  <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplar.com.br" required maxlength="50">
+                  <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="sex">Sexo:</label>
-                  <select class="form-control" name="sex" id="sex">
+                  <select class="form-control" name="sex" id="sex" required>
                     <option value="">Escolha</option>
-                    <option value="">Masculino Cis</option>
-                    <option value="">Feminino Cis</option>
-                    <option value="">Masculino Trans</option>
-                    <option value="">Feminino Trans</option>
-                    <option value="">Genero não-Binário</option>
+                    <option value="mc">Masculino Cis</option>
+                    <option value="fc">Feminino Cis</option>
+                    <option value="mt">Masculino Trans</option>
+                    <option value="ft">Feminino Trans</option>
+                    <option value="gnb">Genero não-Binário</option>
                   </select>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3 mb-5">
                   <label for="estciv">Estado Civil:</label>
-                  <select class="form-control" name="estciv" id="estciv">
+                  <select class="form-control" name="estciv" id="estciv" required>
                     <option value="">Escolha</option>
-                    <option value="">Solteir(a)</option>
-                    <option value="">Casad(a)</option>
-                    <option value="">Divorciad(a)</option>
-                    <option value="">Viuv(a)</option>
+                    <option value="sol">Solteir(a)</option>
+                    <option value="cas">Casad(a)</option>
+                    <option value="div">Divorciad(a)</option>
+                    <option value="viu">Viuv(a)</option>
                   </select>
                 </div>
                 
@@ -114,48 +116,50 @@
 
                 <div class="form-group  col-12 col-md-6 " >
                   <label for="">CEP:</label>
-                  <input class="form-control" type="text" name="cep" id="cep" placeholder="00000000" maxlength="8">
+                  <input class="form-control" type="text" name="cep" id="cep" placeholder="00000000" size="8" maxlength="8">
                 </div>
                
                 <div class="form-group mt-2 col-12 col-md-6 align-self-center">
-                  <button class="btn btn-outline-success mt-3 " type="submit" onclick="pesquisaCEP()">Pesquisar Cep 🔍</button>
-                  <button class="btn btn-outline-danger mt-3 " type="submit" onclick="limparCEP()">Limpar Endereço 🧹</button>
-                  <button class="btn btn-outline-danger mt-3 " type="submit" onclick="limparCampos()">Limpar Tudo 🗑️</button>
+                  <button class="btn btn-outline-success mt-3" id="btnPesquisar" type="submit" onclick="pesquisaCEP()">Pesquisar Cep 🔍</button>
+                  <button class="btn btn-outline-danger mt-3 " id="btnLimparEnd" type="submit" onclick="limparCEP()">Limpar Endereço 🧹</button>
+                  <button class="btn btn-outline-danger mt-3 " id="btnClean" type="submit" onclick="limparCampos()">Limpar Tudo 🗑️</button>
                 </div>
                 
               </div>
 
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Rua:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="rua">Rua:</label>
+                  <input class="form-control" disabled type="text" name="rua" id="rua">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Numero:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="num">Numero:</label>
+                  <input class="form-control" disabled type="text" name="num" id="num">
                 </div>
               
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Complemento:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="comp">Complemento:</label>
+                  <input class="form-control" disabled type="text" name="comp" id="comp">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Bairro:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="bairro">Bairro:</label>
+                  <input class="form-control" disabled type="text" name="bairro" id="bairro">
                 </div>
                  
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Cidade:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="city">Cidade:</label>
+                  <input class="form-control" disabled type="text" name="city" id="city">
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-4">
-                  <label for="">Estado:</label>
-                  <input class="form-control" disabled type="text" name="" id="">
+                  <label for="est">Estado:</label>
+                  <input class="form-control" disabled type="text" name="est" id="est">
                 </div>
                 
-                <div class="form-group mt-2 col-12 align-self-center">
-                  <button class="btn btn-outline-success col-12 mt-1 " type="submit" onclick="cadastrar()">Cadastrar 🧍✔️</button>  
+                <div class="form-group mt-2 mb-5 mb-md-0 col-12 align-self-center">
+                  <button class="btn btn-outline-success col-12 mt-1 " id="btnCadastrar" type="submit" onclick="cadastrar()">Cadastrar 🧍✔️</button>  
                 </div>
+
+                <div class="mb-5"></div>
               </div><!--/Endereço-->
             </form>
 
