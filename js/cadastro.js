@@ -17,6 +17,8 @@ document.getElementById("btnCadastrar").addEventListener("click", function(event
 function pesquisaCEP(){
     
 }
+
+
 function limparCampos(){
     $('#nome').val('');
     $('#snome').val('');
@@ -45,9 +47,27 @@ function limparCEP(){
     $('#est').val('');
 }
 
+
+
+/********************
+ * DANGER, TEST ZONE*
+ ********************/
+
+
+
 function cadastrar(){
-     
+    let nome = $('#nome').val();
+    let snome =  $('#snome').val();
+    let datanasc = $('#datanasc').val();
+    let cel = $('#cel').val();
+    let sex = $('#sex').val();
+    let cpf = $('#cpf').val();
+    let email = $('#email').val();
+    let estciv = $('#estciv').val();
+    
+    console.log(nome,snome,datanasc,cel,sex,cpf,email,estciv);
 }
+
 
 class Pessoa{
     constructor(cpf,nome,snome,datanasc,cel,email,sex,estciv){
@@ -73,7 +93,7 @@ class Pessoa{
 
 }
 
-/*teste*/
+
 class Endereco extends Pessoa{
     constructor(cep,rua,num,comp,bairro,city,est){
         this.cep = cep,
