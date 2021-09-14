@@ -6,7 +6,6 @@
 *FOOTER*
 ********/
 footer{
-    position: fixed;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -19,7 +18,14 @@ footer{
     color: black;
 }
 /*
-.hovericon> li:hover> a::after{    
+.hovericon> li:hover> a::after{
     content: "🎥";
 }
 */
+#trailer{
+    width: 100%;
+    height: 80vh;
+}
+.carrossel{
+width: 40%
+}
