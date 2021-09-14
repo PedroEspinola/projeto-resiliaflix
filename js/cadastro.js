@@ -15,9 +15,28 @@ document.getElementById("btnCadastrar").addEventListener("click", function(event
 });  
   
 function pesquisaCEP(){
-    
-}
+   
+var cep = $('#cep').val();
 
+    if(cep != '' && cep.length === 8){
+                
+        const reqcep = $.ajax({
+            url: `https://viacep.com.br/ws/${cep}/json/`, 
+            async: false,
+        }).responseJSON;
+
+        $('#cep').val(`${reqcep.cep}`);
+        $('#rua').val(`${reqcep.logradouro}`);
+        $('#num').prop('disabled', false);
+        $('#comp').prop('disabled', false); 
+        $('#bairro').val(`${reqcep.bairro}`);
+        $('#city').val(`${reqcep.localidade}`);
+        $('#est').val(`${reqcep.uf}`);
+    }else{
+        /*alert provisorio*/
+        alert('dados invalidos')
+    }
+}
 
 function limparCampos(){
     $('#nome').val('');
@@ -47,7 +66,9 @@ function limparCEP(){
     $('#est').val('');
 }
 
-
+function validaInputNumber(){
+ //   variavel.charCode >= 48 && variavel.charCode <= 57
+}
 
 /********************
  * DANGER, TEST ZONE*
@@ -92,6 +113,7 @@ class Pessoa{
     }
 
 }
+
 
 
 class Endereco extends Pessoa{
