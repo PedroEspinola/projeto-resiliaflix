@@ -26,6 +26,13 @@ footer{
     width: 100%;
     height: 80vh;
 }
-.carrossel{
-width: 40%
+.poster-carrossel{
+    width:25%!important;
+    margin: 0px 40px!important;
+}
+
+@media (max-width: 700px){
+    img{
+        margin: 0px 5px
+    }
 }

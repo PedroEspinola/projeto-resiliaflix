@@ -1,101 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre</title>
 
-     <!--CSS-->
-     <link rel="stylesheet" href="/css/index.css">
-     <link rel="stylesheet" href="/css/info.css"
+  <!--CSS-->
+  <link rel="stylesheet" href="/css/info.css" />
+  <link rel="stylesheet" href="/css/index.css">
 
-     <!-- Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-     <!-- Font Awesome Icons -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-     <!--Icon-->
-     <link rel="shortcut icon" href="/img/logo/icone.png" type="image/x-icon">
+  <!--Icon-->
+  <link rel="shortcut icon" href="/img/logo/icone.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">ResiliaFlix</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="buscar.html">Buscar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastro</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contatos.html">Contato</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ResiliaFlix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="buscar.html">Buscar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contatos.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container">
-        <div class="row">
-          <figure class="col">
-            <img id="poster" src="">
-          </figure>
-          <div class="col">
-            <h1 id="titulo"></h1>
-            <p id="ano"></p>
-            <p id="sinopse"></p>
+  <main class="container fonte">
+    <div class="row">
+      <figure class="col d-flex flex-column align-items-center">
+        <img class="w-75" id="poster" src="">
+      </figure>
+      <div class="col">
+        <h1 class="negrito" id="titulo"></h1>
+        <p id="ano"></p>
+        <p id="sinopse"></p>
+        <p id="atores"></p>
+        <p id="direcao"></p>
+      </div>
+    </div>
+  </main>
+
+  <main>
+    <!--Carrossel-->
+    <label for="trailer">Filmes sugeridos</label>
+    <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="6000">
+          <img class="poster-carrossel" id="poster-0" src="" class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-1" src="" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-2" src="" class=class="w-25" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img class="poster-carrossel" id="poster-3" src="" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-4" src="" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-5" src="" class=class="w-25" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img class="poster-carrossel" id="poster-6" src="" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-7" src="" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-8" src="" class=class="w-25" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="30000">
+          <img class="poster-carrossel" id="poster-9" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-10" class=class="w-25" alt="...">
+          <img class="poster-carrossel" id="poster-11" class=class="w-25" alt="...">
+        </div>
+      </div>
+      <div class="carousel-indicators position-relative">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active "
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+
+  <footer id="rodape">
+    <div class="container-fluid bg-light">
+      <div class="row">
+        <div class="col-6 col-md-4 d-flex">
+
+          <div class="d-flex col-3 col-md-2 align-self-center  ">
+            <a href="index.html"><img src="../img/logo/logo.png" width="70"></a>
+          </div>
+          <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
+            <h6><a class="text-secondary nav-link" href="index.html">ResiliaFlix</a></h6>
           </div>
         </div>
-    </main>
 
-    <footer id="rodape">
-        <div class="container-fluid bg-light">
-            <div class="row">
-              <div class="col-6 col-md-4 d-flex">
+        <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
 
-                  <div class="d-flex col-3 col-md-2 align-self-center  " >
-                      <a href="index.html"><img src="../img/logo/logo.png" width="70"></a>
-                  </div>
-                  <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-                    <h6><a class="text-secondary nav-link" href="index.html">ResiliaFlix</a></h6>
-                  </div>
-              </div>
-
-              <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
-
-                <h6>Todos os direitos Reservados ©</h6>
-              </div>
-
-              <div class="col-4 d-none d-md-flex justify-content-center align-self-center">
-                  <ul class="navbar-nav d-flex flex-row hovericon">
-                    <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="index.html">Login</a></li>
-                    <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="buscar.html">Buscar</a></li>
-                    <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="cadastro.html">Cadastro</a></li>
-                    <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="contatos.html">Contatos</a></li>
-                </ul>
-              </div>
-
-          </div>
+          <h6>Todos os direitos Reservados ©</h6>
         </div>
-      </footer>
 
- <!--Jquery | BootstrapScript-->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
- <script src="../js/info.js"></script>
+        <div class="col-4 d-none d-md-flex justify-content-center align-self-center">
+          <ul class="navbar-nav d-flex flex-row hovericon">
+            <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="index.html">Login</a></li>
+            <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="buscar.html">Buscar</a></li>
+            <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="cadastro.html">Cadastro</a></li>
+            <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="contatos.html">Contatos</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!--Jquery | BootstrapScript-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script src="../js/info.js"></script>
 </body>
+
 </html>
