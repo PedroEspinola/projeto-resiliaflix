@@ -37,8 +37,9 @@ var cep = $('#cep').val();
             const reqcep = $.ajax({
                 url: `https://viacep.com.br/ws/${cep}/json/`, 
                 async: false,
+            //    type: 'GET',
+            //    dataType: 'JSON'
             }).responseJSON;
-    
            
             $('#rua').val(`${reqcep.logradouro}`);
             $('#num').prop('disabled', false).focus();
@@ -93,6 +94,7 @@ function limparCEP(){
 
 
 function cadastrar(){
+    
     let nome = $('#nome').val();
     let snome =  $('#snome').val();
     let datanasc = $('#datanasc').val();
@@ -101,19 +103,52 @@ function cadastrar(){
     let cpf = $('#cpf').val();
     let email = $('#email').val();
     let estciv = $('#estciv').val();
+    let cep = $('#cep').val();
+    let rua = $('#rua').val();
+    let num = $('#num').val();
+    let comp = $('#comp').val();
+    let bairro = $('#bairro').val();
+    let city = $('#city').val();
+    let est = $('#est').val();
     
-    console.log(nome,snome,datanasc,cel,sex,cpf,email,estciv);
+    const cadastro = []
 
-   let pessoa = new Pessoa(cpf,nome,snome,datanasc,cel,email,sex,estciv);
+   let validado = validaInput(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,bairro,city,est);
 
-   console.log(pessoa)
+   //console.log(datanasc) datanasc esta passando vazio pela validação por alguma razão
+   console.log(validado);
 
-   pessoa.imprimirDadosPessoais();
+    if(validado == true){
+        
+        const pessoa = new Pessoa(cpf,nome,snome,datanasc,cel,email,sex,estciv);
+
+        const endereco = new Endereco(cep,rua,num,comp,bairro,city,est);
+     
+        cadastro.push(pessoa, endereco);
+     
+        console.log(cadastro, 'eu sou a constante'); 
+    }
+
 }
 
+function validaInput(...variaveis){
+    for(let i=0 ; i <= variaveis.length ; i++){
+        if(variaveis[i] == ''){
+          /*provisorio*/
+          console.log(variaveis, 'bloco campo vazio verdade')
+          alert('Preencha todos os Campos!');
+          return false;
+        }else{
+            console.log(variaveis, 'bloco canmpos nao vaios')
+            return true;
+        }
+    }
+}
 
-class Pessoa{
+// extends Endereço
+class Pessoa {
     constructor(cpf,nome,snome,datanasc,cel,email,sex,estciv){
+        //super(cep,rua,num,comp,bairro,city,est);
         this.id = cpf,
         this.nome = nome,
         this.snome = snome,
@@ -137,9 +172,10 @@ class Pessoa{
 }
 
 
-
-class Endereco extends Pessoa{
+ // extends Pessoa
+class Endereco{
     constructor(cep,rua,num,comp,bairro,city,est){
+        //super(cpf,nome,snome,datanasc,cel,email,sex,estciv);
         this.cep = cep,
         this.rua = rua,
         this.num = num,
@@ -148,5 +184,18 @@ class Endereco extends Pessoa{
         this.city = city,
         this.est = est
     }
+    imprimirEndereço(){
+        console.log( this.cep,
+            this.rua,
+            this.num,
+            this.comp,
+            this.bairro,
+            this.city,
+            this.est);
+    }
 }
 
+// class para possivel armazenamento em localStorage
+class Db{
+
+}
