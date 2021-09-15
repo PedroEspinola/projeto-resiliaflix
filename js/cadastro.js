@@ -139,7 +139,7 @@ function validaInput(...variaveis){
           alert('Preencha todos os Campos!');
           return false;
         }else{
-            console.log(variaveis, 'bloco canmpos nao vaios')
+            console.log(variaveis, 'bloco campos nao vazios')
             return true;
         }
     }
