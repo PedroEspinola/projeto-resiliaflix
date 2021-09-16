@@ -34,7 +34,7 @@ Controller
 function pesquisaCEP(){
    
 var cep = $('#cep').val();
-
+    var teste;
     if(cep != '' && cep.length === 8){
         
         try {
@@ -44,7 +44,6 @@ var cep = $('#cep').val();
             //    type: 'GET',
             //    dataType: 'JSON'
             }).responseJSON;
-           
             $('#rua').val(`${reqcep.logradouro}`);
             $('#num').prop('disabled', false).focus();
             $('#comp').prop('disabled', false); 
@@ -60,6 +59,7 @@ var cep = $('#cep').val();
         /*alert provisorio*/
         alert('dados invalidos')
     }
+    
 }
 
 /*
@@ -265,6 +265,9 @@ Model
 class Db{
     gravar(id, arr){
         localStorage.setItem(id, JSON.stringify(arr))
+    }
+    consultar(){
+
     }
 }
 
