@@ -50,16 +50,28 @@
     </header>
     <main>
         <div id="centro">
-            <div id="login">
-                <h1>Faça seu Login</h1>
-                <input type="text" class="entrada" placeholder="Digite seu Email">
-                <input type="text" class="entrada" placeholder="Senha">
-                <button type="submit">Login</button>
-                <input type="checkbox" class="campo1">
-                <p>Lembre-se de mim</p>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"></label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu Email">
+                    <div id="emailHelp" class="form-text">Nós nunca iremos dividir seu email com ninguém.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"></label>
+                    <input type="password" class="form-control" id="senha" placeholder="Senha">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
+                </div>
+                <button onclick="login()" type="submit" class="btn btn-primary">Login</button>
+                <br>
                 <a href="#">Não possui conta? clique aqui!</a>
+                <br>
                 <a href="#">Esqueci minha Senha</a>
-            </div>
+            </form>
+
+
         </div>
 
     </main>
@@ -101,7 +113,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
+
 </body>
 
 </html>

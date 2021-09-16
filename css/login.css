@@ -1,8 +1,8 @@
 main {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #centro {
@@ -24,8 +24,4 @@ main {
     margin: 10px;
     border: solid 1px;
     background: rgba(0, 0, 0, 0.068);
-}
-
-.campo1 {
-    float: left;
 }
