@@ -1,16 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
 
-.fonte{
+.background-gradient{
+    background: rgb(17,0,0);
+    background: linear-gradient(180deg, rgba(17,0,0,1) 60%, rgba(148,16,171,0.9447129193474265) 94%);
+}
+.card-info{
+    background: rgba(232, 232, 232, 0.6);
+    margin: 40px 0px;
+    border-radius:5px
+}
+.fonte-corpo{
     font-family: 'Source Code Pro';
 }
-.negrito{
-    font-weight: bold;
+.fonte-logo{
+    font-family: 'Julius Sans One';
 }
 /* .container{
     background: #0c0910;
     color: #f6f6f6;
 } */
 .poster-carrossel{
-    width:25%!important;
+    width:15%!important;
     margin: 0px 40px!important;
+}
+.largura-max{
+    max-width: 55vh;
+}
+.texto-justificado{
+    te
 }
