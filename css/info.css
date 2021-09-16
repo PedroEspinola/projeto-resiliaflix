@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
 
 .background-gradient{
-    background: rgb(17,0,0);
-    background: linear-gradient(180deg, rgba(17,0,0,1) 60%, rgba(148,16,171,0.9447129193474265) 94%);
+    background: rgba(17,0,0,1);
 }
 .card-info{
     background: rgba(232, 232, 232, 0.6);
@@ -14,6 +13,13 @@
 }
 .fonte-logo{
     font-family: 'Julius Sans One';
+    color:#e8e8e8!important;
+}
+.fonte-nav{
+    color:#e8e8e8!important;
+}
+.poster-card{
+    box-shadow: 0px 0px 20px 0px;
 }
 /* .container{
     background: #0c0910;
@@ -26,6 +32,17 @@
 .largura-max{
     max-width: 55vh;
 }
-.texto-justificado{
-    te
+/* .altura-max{
+    max-height: 80vh;
+} */
+.navbar-estilo{
+    background: #521389;
+}
+.fonte-logo:hover{
+    transform: scale(1.1);
+}
+.fonte-nav:hover{
+    background: #e8e8e8;
+    color: #521389!important;
+    border-radius: 5px;
 }
