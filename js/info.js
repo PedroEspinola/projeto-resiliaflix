@@ -22,8 +22,8 @@ function buscarFilmes() { //função para exibição dos posteres
             type: 'GET',
             dataType: 'json',
                 success: function(result){
-                    $(`#poster-${index}`).attr('src', result.Poster)
-                    $(`#poster-${index}`).data('imdb', filme)
+                    $(`#poster-${index}`).attr('src', result.Poster);
+                    $(`#poster-${index}`).data('imdb', filme);
                 }
             })
     })
@@ -32,7 +32,7 @@ function buscarFilmes() { //função para exibição dos posteres
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
-console.log(params)
+console.log(params);
 
 
 $.ajax({
@@ -40,12 +40,14 @@ $.ajax({
     type: 'GET',
     dataType: 'json',
         success: function(result){
-        $('#poster').attr('src', result.Poster)
-        $('#titulo').html(result.Title)
-        $('#ano').html(`Ano de lançamento:${result.Year}`)
-        $('#sinopse').html(`Sinopse:${result.Plot}`)
-        $('#atores').html(`Elenco:${result.Actors}`)
-        $('#direcao').html(`Direção:${result.Writer}`)
-        console.log(result)
+        $('#poster').attr('src', result.Poster);
+        $('#titulo').html(result.Title);
+        $('#ano').html(result.Year);
+        $('#sinopse').html(result.Plot);
+        $('#atores').html(result.Actors);
+        $('#direcao').html(result.Writer);
+        $('#duracao').html(result.Runtime);
+        $('#genero').html(result.Genre);
+        console.log(result);
     }
     })

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
 .fonte{
     font-family: 'Source Code Pro';
@@ -6,10 +6,10 @@
 .negrito{
     font-weight: bold;
 }
-.container{
+/* .container{
     background: #0c0910;
     color: #f6f6f6;
-}
+} */
 .poster-carrossel{
     width:25%!important;
     margin: 0px 40px!important;
