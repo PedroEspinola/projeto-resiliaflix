@@ -22,23 +22,12 @@ function buscarFilmes() { //função para exibição dos posteres
             url: `http://www.omdbapi.com/?apikey=2802824f&i=${filme}`,
             type: 'GET',
             dataType: 'json',
-<<<<<<< HEAD
-            success: function(result) {
-                $(`#poster-${index}`).attr('src', result.Poster)
-            }
-
-        })
-
-=======
                 success: function(result){
                     $(`#poster-${index}`).attr('src', result.Poster)
                     $(`#poster-${index}`).data('imdb', filme)
                 }
             })
->>>>>>> 3882b2aae876fe493b0a1eac817cdd41098be13b
     })
-    console.log(filmes)
-
 }
 
 $('.carousel-item').click(function(event){ //função para direcionar para a página de informações

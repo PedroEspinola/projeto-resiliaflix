@@ -6,13 +6,7 @@
 /*******
 *FOOTER*
 ********/
-<<<<<<< HEAD
-
-footer {
-    position: fixed;
-=======
 footer{
->>>>>>> 3882b2aae876fe493b0a1eac817cdd41098be13b
     display: flex;
     justify-content: center;
     width: 100%;
