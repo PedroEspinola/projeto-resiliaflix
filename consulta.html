@@ -38,7 +38,7 @@
                     <a class="nav-link" href="buscar.html">Buscar</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="consulta.html">Meus Dados</a>
@@ -46,7 +46,6 @@
                   <li class="nav-item">
                     <a class="nav-link" href="contatos.html">Contato</a>
                   </li>
-
                 </ul>
               </div>
             </div>
@@ -59,40 +58,51 @@
       </section>
 
         <section class="container"><!--Formulario-->
-          <h2 class="text-secondary text-muted">Preencha o formulario para efetivar seu cadastro!</h2>
+          <h2 class="text-secondary text-muted">Consulte ou atualize suas infomações:</h2>
             <form action="">
               
               <div class="row justify-content-center"><!--Info pessoais-->
+                <div class="form-group col-12 col-md-6 mb-3">
+                    <label for="id"> Digite seu CPF para consulta:</label>
+                    <input class="form-control" type="number" name="id" id="id" placeholder="12345678910" required autofocus size="50" maxlength="50">
+                  </div>
+
+                  <div class="col-12 col-md-6 mb-3 mt-4" >
+                    <button class="btn btn-outline-primary col-12" id="btnPesquisar" type="submit" onclick="pesquisar()">Pesquisar 🔍</button>
+                  </div>
+
+                <hr>
+
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome"> Nome:</label>
-                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus size="50" maxlength="50">
+                  <input class="form-control" type="text" name="nome" id="nome" placeholder="Manoel" required autofocus size="50" maxlength="50" disabled>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Sobrenome:</label>
-                  <input class="form-control" type="text" name="snome" id="snome" placeholder="José Maria" required size="50" maxlength="50">
+                  <input class="form-control" type="text" name="snome" id="snome" placeholder="José Maria" required size="50" maxlength="50" disabled>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Data de Nascimento:</label>
-                  <input class="form-control" type="date" name="datanasc" id="datanasc" placeholder="05/09/1988" value="" required>
+                  <input class="form-control" type="date" name="datanasc" id="datanasc" placeholder="05/09/1988" value="" required disabled>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">CPF:</label>
-                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
+                  <input class="form-control" type="number" name="cpf" id="cpf" placeholder="12345678910" required size="11" maxlength="11"onkeyup="somenteNumeros(this)" disabled>
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Tel/Cel:</label>
-                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
+                  <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)" disabled>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Email:</label>
-                  <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50">
+                  <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50" disabled>
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="sex">Sexo:</label>
-                  <select class="form-control" name="sex" id="sex" required>
+                  <select class="form-control" name="sex" id="sex" required disabled>
                     <option value="">Escolha</option>
                     <option value="mc">Masculino Cis</option>
                     <option value="fc">Feminino Cis</option>
@@ -103,7 +113,7 @@
                 </div>
                 <div class="form-group col-12 col-md-6 col-lg-3 mb-5">
                   <label for="estciv">Estado Civil:</label>
-                  <select class="form-control" name="estciv" id="estciv" required>
+                  <select class="form-control" name="estciv" id="estciv" required disabled>
                     <option value="">Escolha</option>
                     <option value="sol">Solteir(a)</option>
                     <option value="cas">Casad(a)</option>
@@ -116,18 +126,14 @@
               </div><!-- Info Pessoais-->
 
               <div class="row"><!--Endereço-->
-                <h4 class="text-secondary">Informe seu CEP e Confirme seu endereço:</h4>
+                <h4 class="text-secondary">Confirme ou Atualize seu Endereço</h4>
 
                 <div class="form-group  col-12 col-md-6 " >
                   <label for="">CEP:</label>
-                  <input class="form-control" type="number" name="cep" id="cep" placeholder="00000000" size="8" maxlength="8" onkeyup="somenteNumeros(this)">
+                  <input class="form-control" type="number" name="cep" id="cep" disabled placeholder="00000000" size="8" maxlength="8">
                 </div>
                
-                <div class="form-group mt-2 col-12 col-md-6 align-self-center">
-                  <button class="btn btn-outline-success mt-3" id="btnPesquisar" type="submit" onclick="pesquisaCEP()">Pesquisar Cep 🔍</button>
-                  <button class="btn btn-outline-danger mt-3 " id="btnLimparEnd" type="submit" onclick="limparCEP()">Limpar Endereço 🧹</button>
-                  <button class="btn btn-outline-danger mt-3 " id="btnClean" type="submit" onclick="limparCampos()">Limpar Tudo 🗑️</button>
-                </div>
+               
                 
               </div>
 
@@ -159,10 +165,16 @@
                   <input class="form-control" disabled type="text" name="est" id="est" required>
                 </div>
                 
-                <div class="form-group mt-2 mb-5 mb-md-0 col-12 align-self-center">
-                  <button class="btn btn-outline-success col-12 mt-1 " id="btnCadastrar" type="submit" onclick="cadastrar()">Cadastrar 🧍✔️</button>  
+                <div class="form-group col-12 col-md-4 align-self-center">
+                  <button class="btn btn-outline-success col-12 mt-1 " id="confirmar" type="submit" onclick="confirmar()">Confirmar 🧍✔️</button>  
                 </div>
-
+                <div class="form-group col-12 col-md-4 align-self-center">
+                    <button class="btn btn-outline-warning text-dark col-12 mt-1 " id="atualizar" type="submit">Atualizar 🧍🗘</button>  
+                </div>
+                <div class="form-group col-12 col-md-4 align-self-center">
+                    <button class="btn btn-outline-danger col-12 mt-1 " id="remover" type="submit">Excluir 🧍🗑️</button>  
+                </div>
+                <div class="mb-5"></div>
                 <div class="mb-5"></div>
               </div><!--/Endereço-->
             </form>
@@ -207,6 +219,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!--cadastro.js esta aqui por causa da DB antes de implementar MVC-->
+    <!--script src="js/consulta.js"></script>-->
     <script src="js/cadastro.js"></script>
+    
 </body>
 </html>

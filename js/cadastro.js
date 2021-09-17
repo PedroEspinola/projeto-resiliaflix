@@ -34,7 +34,7 @@ Controller
 function pesquisaCEP(){
    
 var cep = $('#cep').val();
-    var teste;
+
     if(cep != '' && cep.length === 8){
         
         try {
@@ -168,6 +168,7 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     db.gravar(id, cadastro)
 }
 
+
 /*
 Model
 */
@@ -266,8 +267,17 @@ class Db{
     gravar(id, arr){
         localStorage.setItem(id, JSON.stringify(arr))
     }
-    consultar(){
-
+    consultar(id){
+        try {
+            id = parseInt(id)
+            console.log(id)
+            const cadastro = localStorage.getItem(id, JSON.parse(arr))
+            console.log(cadastro)
+            return cadastro;
+          } catch (error) {
+              alert(`Erro durante a Busca: ${error}`)
+          }
     }
 }
+
 
