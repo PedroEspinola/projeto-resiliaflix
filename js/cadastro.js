@@ -271,7 +271,7 @@ class Db{
         try {
             id = parseInt(id)
             console.log(id)
-            const cadastro = localStorage.getItem(id, JSON.parse(arr))
+            const cadastro = JSON.parse(localStorage.getItem(id))
             console.log(cadastro)
             return cadastro;
           } catch (error) {
