@@ -31,5 +31,5 @@ function buscarFilmes() { //função para exibição dos posteres
 }
 
 $('.carousel-item').click(function(event){ //função para direcionar para a página de informações
-    location.href = `../html/info.html?id=${$(`#${event.target.id}`).data('imdb')}`
+    location.href = `/info.html?id=${$(`#${event.target.id}`).data('imdb')}`
 })
