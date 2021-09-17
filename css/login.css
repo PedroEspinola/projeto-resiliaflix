@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px;
+    padding: 50px;
+    border-radius: 30px;
+    /* background-color: red; */
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+.entrada {
+    margin: 10px;
+    border: solid 1px;
+    background: rgba(0, 0, 0, 0.068);
+}

@@ -15,18 +15,29 @@ function buscarFilmes() { //função para exibição dos posteres
         'tt0068646',//poderoso chefão
         'tt1235841', //medianeiras
     ]
-    filmes.forEach(function (filme, index) { //função que percorre os IDs e chama API
+    filmes.forEach(function(filme, index) { //função que percorre os IDs e chama API
+
 
         $.ajax({
             url: `http://www.omdbapi.com/?apikey=2802824f&i=${filme}`,
             type: 'GET',
             dataType: 'json',
+<<<<<<< HEAD
+            success: function(result) {
+                $(`#poster-${index}`).attr('src', result.Poster)
+            }
+
+        })
+
+=======
                 success: function(result){
                     $(`#poster-${index}`).attr('src', result.Poster)
                     $(`#poster-${index}`).data('imdb', filme)
                 }
             })
+>>>>>>> 3882b2aae876fe493b0a1eac817cdd41098be13b
     })
+    console.log(filmes)
 
 }
 
