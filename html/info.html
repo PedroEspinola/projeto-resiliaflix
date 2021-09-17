@@ -23,28 +23,28 @@
   <link rel="shortcut icon" href="/img/logo/icone.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="background-gradient">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">ResiliaFlix</a>
+        <a class="navbar-brand fonte-logo fw-bold" href="#">ResiliaFlix</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Login</a>
+            <li class="nav-item ">
+              <a class="nav-link fonte-nav" href="index.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="buscar.html">Buscar</a>
+              <a class="nav-link fonte-nav" href="buscar.html">Buscar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro.html">Cadastro</a>
+              <a class="nav-link fonte-nav" href="cadastro.html">Cadastro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contatos.html">Contato</a>
+              <a class="nav-link fonte-nav" href="contatos.html">Contato</a>
             </li>
           </ul>
         </div>
@@ -52,24 +52,30 @@
     </nav>
   </header>
 
-  <main class="container fonte">
+  <main class="container fonte-corpo card-info">
     <div class="row">
-      <figure class="col d-flex flex-column align-items-center">
-        <img class="w-75" id="poster" src="">
+      <figure class="col d-flex flex-column align-items-center m-0 p-0">
+        <img class="w-100 largura-max my-3 poster-card" id="poster" src="">
       </figure>
-      <div class="col">
-        <h1 class="negrito" id="titulo"></h1>
+      <div class="col p-3">
+        <h1 class="fw-bold" id="titulo"></h1>
         <p id="ano"></p>
         <p id="sinopse"></p>
+        <label for="atores"><img src="../img/icones-info/drama.png"/> Elenco</label>
         <p id="atores"></p>
+        <label for="direcao"><img src="../img/icones-info/clapperboard.png"/> Direção</label>
         <p id="direcao"></p>
+        <label for="direcao"><img src="../img/icones-info/clock.png"/> Duração</label>
+        <p id="duracao"></p>
+        <label for="direcao"><img src="../img/icones-info/film.png"/> Gênero</label>
+        <p id="genero"></p>
       </div>
     </div>
   </main>
 
-  <main>
+  <section>
     <!--Carrossel-->
-    <label for="trailer">Filmes sugeridos</label>
+    <label for="carrossel">Filmes sugeridos</label>
     <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="6000">
