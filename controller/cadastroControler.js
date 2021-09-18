@@ -30,6 +30,8 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     let id = pessoa._id;
     db = new Db();
     db.gravar(id, cadastro)
+    limparCampos()
+    alert('Usuario Cadastrado com Sucesso!');
 }
 
 

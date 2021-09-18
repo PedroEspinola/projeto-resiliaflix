@@ -108,5 +108,7 @@ class Db{
               alert(`Erro durante a Busca: ${error}`)
           }
     }
+    delete(id){
+        localStorage.removeItem(id)
+    }
 }
-
