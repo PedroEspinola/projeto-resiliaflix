@@ -23,3 +23,41 @@ function pegaDados(id){
         alert('CPF Invalido!');
     }
 }
+function validaInput(...variaveis){
+    for(let i=0 ; i <= variaveis.length ; i++){
+        if(variaveis[i] == ''){
+          /*provisorio*/
+          console.log(variaveis, 'bloco campo vazio verdade')
+          alert('Preencha todos os Campos!');
+          return false;
+        }else{
+            console.log(variaveis, 'bloco campos nao vazios')
+            return true;
+        }
+    }
+}
+/*
+controler
+*/
+function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,comp,bairro,city,est){
+     
+    const cadastro = []
+    const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, email, sex, estciv);
+
+    const endereco = new Endereco(cep, rua, num, comp, bairro, city, est);
+
+    cadastro.push(pessoa, endereco);
+
+   // console.log(cadastro, 'eu sou a constante');
+    let id = pessoa._id;
+    let db = new Db();
+    db.gravar(id, cadastro)
+    limparCampos()
+    /*provisorio*/
+    alert('Dados Atualizados com Sucesso')
+}
+function excluirCadastro(id){
+    let db = new Db()
+    db.delete(id)
+    limparCampos()
+}
