@@ -69,8 +69,6 @@ function confirmar(){
     let estciv = $('#restciv').val();
     let cep = $('#rcep').val();
     let rua = $('#rrua').val();
-    let num = $('#rnum').val();
-    let comp = $('#rcomp').val();
     let bairro = $('#rbairro').val();
     let city = $('#rcity').val();
     let est = $('#rest').val();
@@ -78,7 +76,8 @@ function confirmar(){
  
 
    let validado = validaInput(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,bairro,city,est);
-   if(validado !== ''){
+   console.log(validado)
+   if(validado !== '' || validado !== false){
     limparCampos()
     alert('Dados salvados com sucesso!');
    }

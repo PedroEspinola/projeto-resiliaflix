@@ -60,4 +60,5 @@ function excluirCadastro(id){
     let db = new Db()
     db.delete(id)
     limparCampos()
+    alert('Usuario Excluido com Sucesso!')
 }
