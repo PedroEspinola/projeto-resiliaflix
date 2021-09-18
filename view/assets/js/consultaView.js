@@ -59,8 +59,29 @@ function pesquisar(){
 }
 
 function confirmar(){
+    let nome = $('#rnome').val();
+    let snome =  $('#rsnome').val();
+    let datanasc = $('#rdatanasc').val();
+    let cel = $('#rcel').val();
+    let sex = $('#rsex').val();
+    let cpf = $('#rcpf').val();
+    let email = $('#remail').val();
+    let estciv = $('#restciv').val();
+    let cep = $('#rcep').val();
+    let rua = $('#rrua').val();
+    let num = $('#rnum').val();
+    let comp = $('#rcomp').val();
+    let bairro = $('#rbairro').val();
+    let city = $('#rcity').val();
+    let est = $('#rest').val();
+    
+ 
+
+   let validado = validaInput(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,bairro,city,est);
+   if(validado !== ''){
     limparCampos()
     alert('Dados salvados com sucesso!');
+   }
 }
 /*view*/
 function atualizar(){
