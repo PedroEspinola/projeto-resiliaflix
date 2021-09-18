@@ -18,14 +18,14 @@ filme.done((result) => {
 
 function renderizarFilme(filme){
     console.log(filme)
-    $('#poster').attr('src', filme.getPoster);
-    $('#titulo').html(filme.Title);
-    $('#ano').html(filme.Year);
-    $('#sinopse').html(filme.Plot);
-    $('#atores').html(filme.Actors);
-    $('#direcao').html(filme.Writer);
-    $('#duracao').html(filme.Runtime);
-    $('#genero').html(filme.Genre);
+    $('#poster').attr('src', filme.getPoster());
+    $('#titulo').html(filme.getTitulo());
+    $('#ano').html(filme.getAno());
+    $('#sinopse').html(filme.getSinopse());
+    $('#atores').html(filme.getAtores());
+    $('#direcao').html(filme.getDirecao());
+    $('#duracao').html(filme.getDuracao());
+    $('#genero').html(filme.getGenero());
 }
 
 //Controller
@@ -45,16 +45,15 @@ function buscarFilmes() { //função para exibição dos posteres
         'tt1235841', //medianeiras
     ]
     filmes.forEach(function (filme, index) { //função que percorre os IDs e chama API
-
         $.ajax({
             url: `http://www.omdbapi.com/?apikey=2802824f&i=${filme}`,
             type: 'GET',
             dataType: 'json',
-                success: function(result){
-                    $(`#poster-${index}`).attr('src', result.Poster);
-                    $(`#poster-${index}`).data('imdb', filme);
-                }
-            })
+            success: function(result){
+                $(`#poster-${index}`).attr('src', result.Poster);
+                $(`#poster-${index}`).data('imdb', filme);
+            }
+        })
     })
 
 }
