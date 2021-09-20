@@ -33,3 +33,16 @@ option{
     
     color: black !important;
 }
+#rdatanasc{
+    cursor: pointer;
+}
+
+.modal{
+    margin-top: 15%;
+}
+
+@media (max-width: 480px) {
+  .modal{
+    margin-top: 50%;
+  }
+}

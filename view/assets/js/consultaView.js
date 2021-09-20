@@ -82,9 +82,15 @@ function confirmar(){
 
    let validado = validaInput(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,bairro,city,est);
    console.log(validado)
-   if(validado !== '' || validado !== false){
+   if(validado !== '' && validado !== false){
     limparCampos()
-    alert('Dados salvados com sucesso!');
+    $('#tituloSuccess').html('Usuario Cadastrado!');
+    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#showModalSuccess').modal('show');
+   }else{
+    $('#tituloErro').html('Preencha todos os Campos');
+    $('#msgErro').html('Verifique se todos os campos foram preenchidos corretamente!!')
+    $('#showModalError').modal('show');
    }
 }
 /*view*/
@@ -122,7 +128,9 @@ function atualizar(){
 function remover(){
     let id = $('#rcpf').val()
     if(id == '' || id == null){
-        alert('O Campo do CPF esta Vazio \n Consulte seu CPF na base de dados!');
+        $('#tituloErro').html('CPF Incorreto');
+        $('#msgErro').html('Verifique se o campo foi preechido corretamente!!')
+        $('#showModalError').modal('show');
     }else{
         excluirCadastro(id)
     }
