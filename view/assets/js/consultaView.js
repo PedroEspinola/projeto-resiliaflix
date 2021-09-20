@@ -1,6 +1,9 @@
 document.getElementById("btnPesquisar").addEventListener("click", function(event){
     event.preventDefault()
 });
+document.getElementById("btnCEP").addEventListener("click", function(event){
+    event.preventDefault()
+});
 
 document.getElementById("confirmar").addEventListener("click", function(event){
     event.preventDefault()
@@ -22,7 +25,9 @@ document.getElementById("atualizar").addEventListener("click", function(){
 document.getElementById("remover").addEventListener("click", function(){
     remover()
 })
-
+document.getElementById("btnCEP").addEventListener("click", function(event){
+    pesquisaCEP()
+});
 /*view*/
 function somenteNumeros(num) {
     var er = /[^0-9.]/;
@@ -121,4 +126,12 @@ function remover(){
     }else{
         excluirCadastro(id)
     }
+}
+
+function pesquisaCEP(){
+   
+    var cep = $('#rcep').val();
+    
+    buscaCep(cep)
+        
 }

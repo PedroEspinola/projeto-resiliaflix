@@ -93,3 +93,10 @@ function cadastrar(){
 
 }
 
+function pesquisaCEP(){
+   
+    var cep = $('#cep').val();
+    
+    buscaCep(cep)
+        
+}

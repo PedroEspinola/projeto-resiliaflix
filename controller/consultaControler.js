@@ -62,3 +62,30 @@ function excluirCadastro(id){
     limparCampos()
     alert('Usuario Excluido com Sucesso!')
 }
+
+function buscaCep(cep){
+    if(cep != '' && cep.length === 8){
+            
+        try {
+            const reqcep = $.ajax({
+                url: `https://viacep.com.br/ws/${cep}/json/`, 
+                async: false,
+            //    type: 'GET',
+            //    dataType: 'JSON'
+            }).responseJSON;
+            $('#rrua').val(`${reqcep.logradouro}`);
+            $('#rnum').focus();
+            $('#rbairro').val(`${reqcep.bairro}`);
+            $('#rcity').val(`${reqcep.localidade}`);
+            $('#rest').val(`${reqcep.uf}`);
+            console.log('cheguei');
+        } catch (error) {
+            /*alert provisorio*/
+            alert(`Houve um erro durante a execução: ${error}`);
+        }
+        
+    }else{
+        /*alert provisorio*/
+        alert('dados invalidos')
+    }
+}
