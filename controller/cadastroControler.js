@@ -39,35 +39,31 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
 Controller
 */
   
-function pesquisaCEP(){
-   
-    var cep = $('#cep').val();
-    
-        if(cep != '' && cep.length === 8){
+
+function buscaCep(cep){
+    if(cep != '' && cep.length === 8){
             
-            try {
-                const reqcep = $.ajax({
-                    url: `https://viacep.com.br/ws/${cep}/json/`, 
-                    async: false,
-                //    type: 'GET',
-                //    dataType: 'JSON'
-                }).responseJSON;
-                $('#rua').val(`${reqcep.logradouro}`);
-                $('#num').prop('disabled', false).focus();
-                $('#comp').prop('disabled', false); 
-                $('#bairro').val(`${reqcep.bairro}`);
-                $('#city').val(`${reqcep.localidade}`);
-                $('#est').val(`${reqcep.uf}`);
-                console.log('cheguei');
-            } catch (error) {
-                /*alert provisorio*/
-                alert(`Houve um erro durante a execução: ${error}`);
-            }
-            
-        }else{
+        try {
+            const reqcep = $.ajax({
+                url: `https://viacep.com.br/ws/${cep}/json/`, 
+                async: false,
+            //    type: 'GET',
+            //    dataType: 'JSON'
+            }).responseJSON;
+            $('#rua').val(`${reqcep.logradouro}`);
+            $('#num').prop('disabled', false).focus();
+            $('#comp').prop('disabled', false); 
+            $('#bairro').val(`${reqcep.bairro}`);
+            $('#city').val(`${reqcep.localidade}`);
+            $('#est').val(`${reqcep.uf}`);
+            console.log('cheguei');
+        } catch (error) {
             /*alert provisorio*/
-            alert('dados invalidos')
+            alert(`Houve um erro durante a execução: ${error}`);
         }
         
+    }else{
+        /*alert provisorio*/
+        alert('dados invalidos')
     }
-    
+}

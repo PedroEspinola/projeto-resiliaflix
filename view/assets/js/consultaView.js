@@ -1,6 +1,9 @@
 document.getElementById("btnPesquisar").addEventListener("click", function(event){
     event.preventDefault()
 });
+document.getElementById("btnCEP").addEventListener("click", function(event){
+    event.preventDefault()
+});
 
 document.getElementById("confirmar").addEventListener("click", function(event){
     event.preventDefault()
@@ -22,7 +25,9 @@ document.getElementById("atualizar").addEventListener("click", function(){
 document.getElementById("remover").addEventListener("click", function(){
     remover()
 })
-
+document.getElementById("btnCEP").addEventListener("click", function(event){
+    pesquisaCEP()
+});
 /*view*/
 function somenteNumeros(num) {
     var er = /[^0-9.]/;
@@ -59,8 +64,28 @@ function pesquisar(){
 }
 
 function confirmar(){
+    let nome = $('#rnome').val();
+    let snome =  $('#rsnome').val();
+    let datanasc = $('#rdatanasc').val();
+    let cel = $('#rcel').val();
+    let sex = $('#rsex').val();
+    let cpf = $('#rcpf').val();
+    let email = $('#remail').val();
+    let estciv = $('#restciv').val();
+    let cep = $('#rcep').val();
+    let rua = $('#rrua').val();
+    let bairro = $('#rbairro').val();
+    let city = $('#rcity').val();
+    let est = $('#rest').val();
+    
+ 
+
+   let validado = validaInput(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,bairro,city,est);
+   console.log(validado)
+   if(validado !== '' || validado !== false){
     limparCampos()
     alert('Dados salvados com sucesso!');
+   }
 }
 /*view*/
 function atualizar(){
@@ -101,4 +126,12 @@ function remover(){
     }else{
         excluirCadastro(id)
     }
+}
+
+function pesquisaCEP(){
+   
+    var cep = $('#rcep').val();
+    
+    buscaCep(cep)
+        
 }

@@ -8,6 +8,7 @@
 
      <!--CSS-->
      <link rel="stylesheet" href="assets/css/cadastro.css">
+     <link rel="stylesheet" href="assets/css/index.css">
 
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -22,44 +23,59 @@
 </head>
 <body>
 
-    <header><!--Header-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">ResiliaFlix</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="buscar.html">Buscar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastre-se</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="consulta.html">Meus Dados</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contatos.html">Contato</a>
-                  </li>
+  <header>
+    <!--Menu de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="./index.html">ResiliaFlix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-between ">
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
+            </li>
+            <div class="d-flex">
+            <li class="nav-item ">
 
-                </ul>
-              </div>
+
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/contato.html"><i class="fas fa-comment-dots"></i>
+                Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+            </li>
+            <!-- Botão login e dados-->
+            <div class="btn-group ">
+              <button class="btn  btn-lg" type="button">
+                <a class="nav-link fonte-nav fs-6"  href="/view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
+              </button>
+              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav"
+                data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1">
+                <a class="nav-link" href="/view/consulta.html"> Meus dados</a>
+              </ul>
             </div>
-          </nav>
-    </header><!--/Header-->
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
 
     <main>
       <section class="container"><!--Carrousel de destaques? 🤔 thinkin-->
           
       </section>
 
-        <section class="container"><!--Formulario-->
-          <h2 class="text-secondary text-muted">Preencha o formulario para efetivar seu cadastro!</h2>
+        <section class="container margim-top" ><!--Formulario-->
+          <h2 class="">Preencha o formulario para efetivar seu cadastro!</h2>
             <form action="">
               
               <div class="row justify-content-center"><!--Info pessoais-->
@@ -116,7 +132,7 @@
               </div><!-- Info Pessoais-->
 
               <div class="row"><!--Endereço-->
-                <h4 class="text-secondary">Informe seu CEP e Confirme seu endereço:</h4>
+                <h4 class="">Informe seu CEP e Confirme seu endereço:</h4>
 
                 <div class="form-group  col-12 col-md-6 " >
                   <label for="">CEP:</label>
@@ -171,30 +187,30 @@
 
     </main>
 
-    <footer id="rodape" class="mb-auto fixed-bottom"><!--Rodapé-->
-      <div class="container-fluid bg-light">
-          <div class="row">
-            <div class="col-6 col-md-4 d-flex">
-
-                <div class="d-flex col-3 col-md-2 align-self-center  " >
-                    <a href="index.html"><img src="assets/img/logo/logo.png" width="70"></a>
-                </div>
-                <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-                  <h6><a class="text-secondary nav-link" href="index.html">ResiliaFlix</a></h6>
-                </div>
+    <footer class="mb-auto navbar-estilo media-footer fixed-bottom">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-6 col-md-4 d-flex">
+  
+            <div class="d-flex col-3 col-md-2 align-self-center  ">
+              <a href="index.html"><img src="assets/img/logo/logo.png" width="70"></a>
             </div>
-
-            <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
-                
-              <h6>Todos os direitos Reservados ©</h6>
+            <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
+          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
             </div>
+          </div>
+  
+          <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
+  
+            <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
+          </div>
 
-            <div class="col-4 d-none d-md-flex justify-content-center align-self-center">    
+            <div class="col-4 d-none d-md-flex justify-content-center align-self-center ">    
                 <ul class="navbar-nav d-flex flex-row hovericon">
-                  <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="index.html">Login</a></li>
-                  <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="buscar.html">Buscar</a></li>
-                  <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="cadastro.html">Cadastro</a></li>
-                  <li class="nav-item mx-2 "><a class="nav-link text-secondary" href="contatos.html">Contatos</a></li>      
+                  <li class="nav-item mx-2 "><a class="nav-link text-white" href="index.html">Login</a></li>
+                  <li class="nav-item mx-2 "><a class="nav-link text-white" href="buscar.html">Buscar</a></li>
+                  <li class="nav-item mx-2 "><a class="nav-link text-white" href="cadastro.html">Cadastro</a></li>
+                  <li class="nav-item mx-2 "><a class="nav-link text-white" href="contatos.html">Contatos</a></li>      
               </ul>
             </div>
             

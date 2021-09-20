@@ -29,14 +29,14 @@ class Pessoa {
         return this._nome,this._snome,this._datanasc,this._cel,this._email,this._sex,this._estciv
     }
     imprimirDadosPessoais(){
-        console.log( this.id,
-            this.nome,
-            this.snome,
-            this.datanasc,
-            this.cel,
-            this.email,
-            this.sex,
-            this.estciv);
+        console.log( this._id,
+            this._nome,
+            this._snome,
+            this._datanasc,
+            this._cel,
+            this._email,
+            this._sex,
+            this._estciv);
     }
 
 }
@@ -75,13 +75,13 @@ class Endereco{
         return this.cep, this.rua, this.num, this.comp, this.bairro, this.city, this.est;
     }
     imprimirEndereço(){
-        console.log( this.cep,
-            this.rua,
-            this.num,
-            this.comp,
-            this.bairro,
-            this.city,
-            this.est);
+        console.log( this._cep,
+            this._rua,
+            this._num,
+            this._comp,
+            this._bairro,
+            this._city,
+            this._est);
     }
 }
 
