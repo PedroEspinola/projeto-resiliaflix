@@ -3,3 +3,15 @@ button:hover{
     transform: scale(1.1);
 }
 
+.margim-top{
+    margin-top: 100px;
+}
+html,body,main{
+    background-color: #1B1B1B;
+}
+h2,h4{
+    color: #F3235F;
+}
+label{
+    color: white;
+}
