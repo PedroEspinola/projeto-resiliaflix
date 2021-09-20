@@ -35,15 +35,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100 d-flex justify-content-between ">
-            <li class="nav-item">
+            <li class="nav-item text-center">
               <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
             </li>
-            <div class="d-flex">
+            <div class="d-flex nav-media">
             <li class="nav-item ">
-
-
-            <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="/view/contato.html"><i class="fas fa-comment-dots"></i>
+              <a class="nav-link fonte-nav fs-6 p-3 div-media" href="/view/contato.html"><i class="fas fa-comment-dots"></i>
                 Contato</a>
             </li>
             <li class="nav-item">
@@ -57,8 +54,8 @@
               <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav"
                 data-bs-toggle="dropdown" aria-expanded="false">
               </button>
-              <ul class="dropdown-menu fonte-nav fs-6 w-1">
-                <a class="nav-link" href="/view/consulta.html"> Meus dados</a>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media">
+                <a class="nav-link px-4" href="/view/consulta.html"> Meus dados</a>
               </ul>
             </div>
           </li>
@@ -72,7 +69,7 @@
   <main class="fonte-corpo padding-carrossel">
     <!--Carrossel-->
     <label for="carrossel">Filmes sugeridos</label>
-    <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <section id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="6000">
           <img class="poster-carrossel" id="poster-0" src="" class="w-25" alt="...">
@@ -114,7 +111,7 @@
 
     <!--Trailer Matrix-->
     <section class="lancamento">
-      <label for="trailer">Em breve - Matrix Resurrections</label>
+      <label class="font-trailer" for="trailer"> Em breve <h1> Matrix Resurrections</h1></label>
       <iframe id="trailer" src="./view/assets/videos/trailerMatrix.mp4"></iframe>
     </section>
   </main>
@@ -122,18 +119,17 @@
  <!--Rodapé-->
   <footer class="mb-auto navbar-estilo media-footer">
     <div class="container-fluid ">
-      <div class="row">
-        <div class="col-6 col-md-4 d-flex">
-
-          <div class="d-flex col-3 col-md-2 align-self-center  ">
+      <div class="row media-footer">
+        <div class="col-6 col-md-4 d-flex div-media">
+          <div class="d-flex col-3 col-md-2 align-self-center">
             <a href="index.html"><img src="view/assets/img/logo/logo.png" width="70"></a>
           </div>
           <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-        <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
+          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
           </div>
         </div>
 
-        <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
+        <div class="col-6 col-md-4 d-flex justify-content-center align-self-center div-media">
 
           <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
         </div>
