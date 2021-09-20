@@ -1,41 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
+
+.background-corpo{
+    background: #1B1B1B;
+}
+/*****
+*HEADER*
+******/
+.navbar-estilo{
+    background: #F3235F;
+}
+.fonte-logo{
+    font-family: 'Julius Sans One';
+    color:#e8e8e8!important;
+}
+.fonte-nav{
+    color:#e8e8e8!important;
+}
+.fonte-logo:hover{
+    transform: scale(1.1);
+}
+
+.fonte-nav:hover{
+    background: #e8e8e8;
+    color: #F3235F!important;
+    border-radius: 5px;
+}
+
 /*****
 *MAIN*
 ******/
-
-
-/*******
-*FOOTER*
-********/
-footer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    bottom: 0px;
+.fonte-corpo{
+    font-family: 'Source Code Pro';
+    color:#e8e8e8
 }
-
-.hovericon>li>a:hover {
-    transition: 0.5s all;
-    transform: scale(1.2);
-    color: black;
-}
-
-
-/*
-.hovericon> li:hover> a::after{
-    content: "🎥";
-}
-*/
 #trailer{
     width: 100%;
     height: 80vh;
 }
 .poster-carrossel{
     width:25%!important;
-    margin: 0px 40px!important;
+    margin: 0px 2%!important;
+}
+.padding-carrossel{
+    padding-top: 5%;
+}
+/*******
+*FOOTER*
+********/
+.hovericon>li>a:hover {
+    transition: 0.5s all;
+    transform: scale(1.2);
+    color: black;
+}
+.fonte-footer{
+    color: #e8e8e8;
 }
 
+/*
+.hovericon> li:hover> a::after{
+    content: "🎥";
+}
+*/
+
+
+
 @media (max-width: 700px){
-    img{
-        margin: 0px 5px
+    .padding-carrossel{
+        padding-top: 15%;
     }
+
+/********
+*FOOTER*
+********/
 }
