@@ -15,3 +15,21 @@ h2,h4{
 label{
     color: white;
 }
+input,select{
+    background: none !important;
+    border: 2px solid #F3235F !important;
+    color: white !important;
+}
+input:placeholder-shown{
+    color: white;
+}
+input:focus,select:focus{
+    box-shadow: 0 0 10px white!important;
+}
+select{
+    cursor: pointer;
+}
+option{
+    
+    color: black !important;
+}
