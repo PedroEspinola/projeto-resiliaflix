@@ -84,10 +84,7 @@ class Endereco{
             this.est);
     }
 }
-/*
-Model
-*/
-// class para possivel armazenamento em localStorage
+
 class Db{
     gravar(id, arr){
         localStorage.setItem(id, JSON.stringify(arr))
@@ -98,17 +95,23 @@ class Db{
             console.log(id)
             const cadastro = JSON.parse(localStorage.getItem(id))
             if(cadastro == null){
-                /*provisorio*/
-                alert('Cadastro Não encontrado');
+                $('#tituloErro').html('Usuario Não encontrado!');
+                $('#msgErro').html('Verifique se o CPF foi digitado corretamente! \n Utilize Somente NUMEROS!');
+                $('#showModalError').modal('show');
             }
             console.log(cadastro)
             return cadastro;
 
           } catch (error) {
-              alert(`Erro durante a Busca: ${error}`)
+            $('#tituloErro').html('Error!');
+            $('#msgErro').html(`Houve um Erro durante a busca do CPF, Error: ${error}`);
+            $('#showModalError').modal('show');
           }
     }
     delete(id){
-        localStorage.removeItem(id)
+        localStorage.removeItem(id);
+            $('#tituloSuccess').html('Usuario Excluido!');
+            $('#msgSuccess').html(`Ususario Excluido com Sucesso! Usuario:${id}`);
+            $('#showModalSuccess').modal('show');
     }
 }

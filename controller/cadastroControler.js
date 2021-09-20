@@ -4,12 +4,12 @@ controler
 function validaInput(...variaveis){
     for(let i=0 ; i <= variaveis.length ; i++){
         if(variaveis[i] == ''){
-          /*provisorio*/
-          console.log(variaveis, 'bloco campo vazio verdade')
-          alert('Preencha todos os Campos!');
+          $('#tituloErro').html('Preencha todos os Campos');
+          $('#msgErro').html('Verifique se todos os campos foram preenchidos!!')
+          $('#showModalError').modal('show');
           return false;
         }else{
-            console.log(variaveis, 'bloco campos nao vazios')
+            
             return true;
         }
     }
@@ -31,7 +31,9 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     db = new Db();
     db.gravar(id, cadastro)
     limparCampos()
-    alert('Usuario Cadastrado com Sucesso!');
+    $('#tituloSuccess').html('Usuario Cadastrado!');
+    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#showModalSuccess').modal('show');
 }
 
 
@@ -56,14 +58,16 @@ function buscaCep(cep){
             $('#bairro').val(`${reqcep.bairro}`);
             $('#city').val(`${reqcep.localidade}`);
             $('#est').val(`${reqcep.uf}`);
-            console.log('cheguei');
+           
         } catch (error) {
-            /*alert provisorio*/
-            alert(`Houve um erro durante a execução: ${error}`);
+            $('#tituloErro').html('Erro!');
+            $('#msgErro').html(`Houve um erro durante a Busca do CEP! \n Tente novamente, use Somente NUMEROS! \n Erro: ${error}`);
+            $('#showModalError').modal('show');
         }
         
     }else{
-        /*alert provisorio*/
-        alert('dados invalidos')
+        $('#tituloErro').html('Dados invalidos!');
+        $('#msgErro').html('Verifique se Digitou o CEP corretamente! \n Use Somente NUMEROS!');
+        $('#showModalError').modal('show');
     }
 }

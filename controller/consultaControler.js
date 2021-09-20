@@ -20,18 +20,19 @@ function pegaDados(id){
         $('#rcity').val(dados[1]._city).prop('disabled', false);
         $('#rest').val(dados[1]._est).prop('disabled', false);
     }else{
-        alert('CPF Invalido!');
+        $('#tituloErro').html('Usuario Não Encontrado!');
+        $('#msgErro').html('Verifique se o CPF foi digitado corretamente!')
+        $('#showModalError').modal('show');
     }
 }
 function validaInput(...variaveis){
     for(let i=0 ; i <= variaveis.length ; i++){
         if(variaveis[i] == ''){
-          /*provisorio*/
-          console.log(variaveis, 'bloco campo vazio verdade')
-          alert('Preencha todos os Campos!');
+            $('#tituloErro').html('Preencha todos os Campos');
+            $('#msgErro').html('Verifique se todos os campos foram preenchidos corretamente!!')
+            $('#showModalError').modal('show');
           return false;
         }else{
-            console.log(variaveis, 'bloco campos nao vazios')
             return true;
         }
     }
@@ -53,14 +54,14 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     let db = new Db();
     db.gravar(id, cadastro)
     limparCampos()
-    /*provisorio*/
-    alert('Dados Atualizados com Sucesso')
+    $('#tituloSuccess').html('Usuario Cadastrado!');
+    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#showModalSuccess').modal('show');
 }
 function excluirCadastro(id){
     let db = new Db()
     db.delete(id)
     limparCampos()
-    alert('Usuario Excluido com Sucesso!')
 }
 
 function buscaCep(cep){
@@ -80,12 +81,14 @@ function buscaCep(cep){
             $('#rest').val(`${reqcep.uf}`);
             console.log('cheguei');
         } catch (error) {
-            /*alert provisorio*/
-            alert(`Houve um erro durante a execução: ${error}`);
+            $('#tituloErro').html('Erro!');
+            $('#msgErro').html(`Houve um erro durante a Busca do CEP! \n Tente novamente, use Somente NUMEROS! \n Erro: ${error}`);
+            $('#showModalError').modal('show');
         }
         
     }else{
-        /*alert provisorio*/
-        alert('dados invalidos')
+        $('#tituloErro').html('Dados invalidos!');
+        $('#msgErro').html('Verifique se Digitou o CEP corretamente! \n Use Somente NUMEROS!');
+        $('#showModalError').modal('show');
     }
 }
