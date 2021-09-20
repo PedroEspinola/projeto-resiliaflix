@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
 
-.background-gradient{
-    background: rgba(17,0,0,1);
-}
 .card-info{
-    background: rgba(232, 232, 232, 0.6);
-    margin: 40px 0px;
-    border-radius:5px
+    margin-top:8%;
 }
 .fonte-corpo{
     font-family: 'Source Code Pro';
@@ -17,19 +12,18 @@
 }
 
 .poster-card{
-    box-shadow: 0px 0px 20px 0px;
+    box-shadow: 0px 0px 20px 0px #000;
+
 }
-/* .container{
-    background: #0c0910;
-    color: #f6f6f6;
-} */
 .poster-carrossel{
     width:15%!important;
-    margin: 0px 40px!important;
+}
+.margin-carrossel{
+    margin-left: 6%!important;
 }
 .largura-max{
     max-width: 55vh;
 }
-/* .altura-max{
-    max-height: 80vh;
-} */
+.btn-carrossel{
+    filter:none!important;
+}
