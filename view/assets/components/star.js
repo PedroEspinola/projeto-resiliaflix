@@ -27,6 +27,9 @@ class star extends HTMLElement {
 
     createStars(){
         const createStar = ( _, id) => {
+            const parametrosUrl = new URLSearchParams(location.search); //pega os parametro da URL
+            const parametrosObjeto = Object.fromEntries(parametrosUrl.entries()); //conerte par objeto os parametros da URL
+
             const star = document.createElement('span')
             star.classList.add('star')
             star.setAttribute('data-value', Number(id) + 1)
@@ -34,7 +37,12 @@ class star extends HTMLElement {
             star.addEventListener('click', this.setRating.bind(this))
             star.addEventListener('mouseover', this.ratingHover.bind(this))
 
-
+            if (localStorage[parametrosObjeto.id]) {
+                this.setAttribute(
+                    'data-rating',
+                    localStorage[parametrosObjeto.id]
+                )
+            }
             return star
         }
 
@@ -47,6 +55,11 @@ class star extends HTMLElement {
     }
 
     setRating(event){
+        const parametrosUrl = new URLSearchParams(location.search); //pega os parametro da URL
+        const parametrosObjeto = Object.fromEntries(parametrosUrl.entries()); //conerte par objeto os parametros da URL
+
+        localStorage.setItem(parametrosObjeto.id,  event.target.getAttribute('data-value'))
+
         this.setAttribute(
             'data-rating',
             event.target.getAttribute('data-value')
