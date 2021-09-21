@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - ResiliaFlix</title>
+
+     <!--CSS-->
+     <link rel="stylesheet" href="assets/css/cadastro.css">
+     <link rel="stylesheet" href="assets/css/index.css">
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+     <!-- Font Awesome Icons -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+ 
+     <!--Icon-->
+     <link rel="shortcut icon" href="assets/img/logo/icone.png" type="image/x-icon">
+
+     
+</head>
+<body>
+
+  <header>
+    <!--Menu de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="./index.html">ResiliaFlix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-between ">
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
+            </li>
+            <div class="d-flex">
+            <li class="nav-item ">
+
+
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/contato.html"><i class="fas fa-comment-dots"></i>
+                Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+            </li>
+            <!-- Botão login e dados-->
+            <div class="btn-group ">
+              <button class="btn  btn-lg" type="button">
+                <a class="nav-link fonte-nav fs-6"  href="/view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
+              </button>
+              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav"
+                data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1">
+                <a class="nav-link" href="/view/consulta.html"> Meus dados</a>
+              </ul>
+            </div>
+          </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <main>
+      <section class="container"><!--Carrousel de destaques? 🤔 thinkin-->
+          
+      </section>
+
+        <section class="container margim-top"><!--Formulario-->
+          <h2 class="">Consulte ou atualize suas infomações:</h2>
+            <form action="">
+              
+              <div class="row justify-content-center"><!--Info pessoais-->
+                <div class="form-group col-12 col-md-6 mb-3">
+                    <label for="id"> Digite seu CPF para consulta:</label>
+                    <input class="form-control" type="number" name="id" id="id" placeholder="12345678910" required autofocus size="50" maxlength="50">
+                  </div>
+
+                  <div class="col-12 col-md-6 mb-3 mt-4" >
+                  <button class="btn btn-outline-primary col-12" id="btnPesquisar" type="submit" onclick="pesquisar()">Pesquisar 🧍🔍</button>
+                  </div>
+
+                <hr>
+
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="rnome"> Nome:</label>
+                  <input class="form-control" type="text" name="rnome" id="rnome" placeholder="Manoel" required autofocus size="50" maxlength="50" disabled>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="rsnome">Sobrenome:</label>
+                  <input class="form-control" type="text" name="rsnome" id="rsnome" placeholder="José Maria" required size="50" maxlength="50" disabled>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="nome">Data de Nascimento:</label>
+                  <input class="form-control" type="date" name="datanasc" id="rdatanasc" placeholder="05/09/1988" value="" required disabled>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="rcpf">CPF:</label>
+                  <input class="form-control" type="number" name="rcpf" id="rcpf" placeholder="12345678910" required size="11" maxlength="11"onkeyup="somenteNumeros(this)" disabled>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="rnome">Tel/Cel:</label>
+                  <input class="form-control" type="number" name="rcel" id="rcel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)" disabled>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="remail">Email:</label>
+                  <input class="form-control" type="email" name="remail" id="remail" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50" disabled>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3">
+                  <label for="rsex">Sexo:</label>
+                  <select class="form-control" name="rsex" id="rsex" required disabled>
+                    <option value="">Escolha</option>
+                    <option value="mc">Masculino Cis</option>
+                    <option value="fc">Feminino Cis</option>
+                    <option value="mt">Masculino Trans</option>
+                    <option value="ft">Feminino Trans</option>
+                    <option value="gnb">Genero não-Binário</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-3 mb-5">
+                  <label for="restciv">Estado Civil:</label>
+                  <select class="form-control" name="restciv" id="restciv" required disabled>
+                    <option value="">Escolha</option>
+                    <option value="sol">Solteir(a)</option>
+                    <option value="cas">Casad(a)</option>
+                    <option value="div">Divorciad(a)</option>
+                    <option value="viu">Viuv(a)</option>
+                  </select>
+                </div>
+                
+                <hr>
+              </div><!-- Info Pessoais-->
+
+              <div class="row"><!--Endereço-->
+                <h4 class="">Confirme ou Atualize seu Endereço</h4>
+
+                <div class="form-group  col-12 col-md-6 " >
+                  <label for="">CEP:</label>
+                  <input class="form-control" type="number" name="rcep" id="rcep" disabled placeholder="00000000" size="8" maxlength="8">
+                </div>
+                <div class="col-12 col-md-6 mb-3 mt-4" >
+                  <button class="btn btn-outline-primary col-12" id="btnCEP" type="submit">Pesquisar CEP 🔍</button>
+                </div>
+               
+                
+              </div>
+
+              <div class="row">
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rrua">Rua:</label>
+                  <input class="form-control" disabled type="text" name="rrua" id="rrua" required>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rnum">Numero:</label>
+                  <input class="form-control" disabled type="number" name="rnum" id="rnum" onkeyup="somenteNumeros(this)">
+                </div>
+              
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rcomp">Complemento:</label>
+                  <input class="form-control" disabled type="text" name="rcomp" id="rcomp">
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rbairro">Bairro:</label>
+                  <input class="form-control" disabled type="text" name="rbairro" id="rbairro" required>
+                </div>
+                 
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rcity">Cidade:</label>
+                  <input class="form-control" disabled type="text" name="rcity" id="rcity" required>
+                </div>
+                <div class="form-group col-12 col-md-6 col-lg-4">
+                  <label for="rest">Estado:</label>
+                  <input class="form-control" disabled type="text" name="rest" id="rest" required>
+                </div>
+                
+                <div class="form-group col-12 col-md-4 align-self-center">
+                  <button class="btn btn-outline-success col-12 mt-1 " id="confirmar" type="submit" >Confirmar 🧍✔️</button>  
+                </div>
+                <div class="form-group col-12 col-md-4 align-self-center">
+                    <button class="btn btn-outline-warning  col-12 mt-1 " id="atualizar" type="submit" >Atualizar 🧍🗘</button>  
+                </div>
+                <div class="form-group col-12 col-md-4 align-self-center">
+                    <button class="btn btn-outline-danger col-12 mt-1 " id="remover" type="submit" >Excluir 🧍🗑️</button>  
+                </div>
+                <div class="mb-5"></div>
+                <div class="mb-5"></div>
+              </div><!--/Endereço-->
+            </form>
+
+        </section><!--/Formulario-->
+
+    </main>
+
+    <!--Modal-->
+    <div class="modal" tabindex="-1" id="showModalSuccess">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-success" id="tituloSuccess"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="msgSuccess"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Modal-->
+
+       <!--Modal-->
+       <div class="modal" tabindex="-1" id="showModalError">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-danger" id="tituloErro"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="msgErro"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/Modal-->
+
+    <footer class="mb-auto navbar-estilo media-footer fixed-bottom">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-6 col-md-4 d-flex">
+  
+            <div class="d-flex col-3 col-md-2 align-self-center  ">
+              <a href="index.html"><img src="assets/img/logo/logo.png" width="70"></a>
+            </div>
+            <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
+          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
+            </div>
+          </div>
+  
+          <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
+  
+            <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
+          </div>
+
+            
+            
+        </div>
+      </div>
+    </footer><!--/Rodapé-->
+    
+    
+    <!--Jquery | BootstrapScript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="assets/js/consultaView.js"></script>
+    <script src="../controller/consultaControler.js"></script>
+    <script src="../model/Consulta.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
+
+.card-info{
+    margin-top:8%;
+}
+.fonte-corpo{
+    font-family: 'Source Code Pro';
+}
+.fonte-logo{
+    font-family: 'Julius Sans One';
+    color:#e8e8e8!important;
+}
+
+.poster-card{
+    box-shadow: 0px 0px 20px 0px #000;
+
+}
+.poster-carrossel{
+    width:15%!important;
+}
+.largura-max{
+    max-width: 55vh;
+}
+.btn-carrossel{
+    filter:none!important;
+}

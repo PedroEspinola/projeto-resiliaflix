@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,500&display=swap');
+
+.background-gradient{
+    background: #1B1B1B;
+    height: 100vh;
+    width: 100vw;
+}
+.transicao:hover{
+    transform: scale(1.05);
+    transition: 0.2s all cubic-bezier(1, 0, 0, 1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0,0.5);
+}
+.conteudo-central{
+    padding-top: 30vh;  
+}
+
+.contatos-card{
+    text-align: center;
+    color: #e8e8e8;
+    font-family: 'Source Code Pro', monospace;
+    border-radius:0.3rem!important;
+    box-shadow:0 0 20px rgba(0,0,0,0.40);   
+    width: 16vw!important;
+    background-color:#F3235F!important;
+}
+
+img:hover{
+    transform: scale(1.02);
+    transition: 0.4s ease-out;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0,0.9);
+}
+
+#img-dev{
+    object-position: 0 20%;
+}
+
+.img-card{
+    object-fit: cover;
+    height: 30vh;
+    position: relative;
+    top: -2em;
+    border-radius:0.3rem!important;
+    box-shadow:0 0 2em rgba(0, 0, 0, 0.774);
+}
+.elementos-card{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 15vh;
+}
+.nome-dev{
+    width: 8vw;
+    position: relative;
+    align-self: center;
+    color: rgb(235, 231, 231);
+    
+}
+.nome-dev:after,
+.nome-dev:before{
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.3rem;
+}
+.nome-dev:before{
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+    transform: scaleY(0);
+}
+.nome-dev:after{
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+    transform: scaleX(0);
+}
+.nome-dev:hover::before{
+    transform: scaleY(1);
+}
+.nome-dev:hover::after{
+    transform:scaleX(1);
+}
+.nome-dev:hover{
+    color:rgb(8, 8, 8);
+    transition: 0.5s;
+}
+
+    
+
+
+
+
+
+

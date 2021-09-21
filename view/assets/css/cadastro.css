@@ -1,0 +1,48 @@
+button:hover{
+    transition: 0.5s all;
+    transform: scale(1.1);
+}
+
+.margim-top{
+    margin-top: 100px;
+}
+html,body,main{
+    background-color: #1B1B1B;
+}
+h2,h4{
+    color: #F3235F;
+}
+label{
+    color: white;
+}
+input,select{
+    background: none !important;
+    border: 2px solid #F3235F !important;
+    color: white !important;
+}
+input:placeholder-shown{
+    color: white;
+}
+input:focus,select:focus{
+    box-shadow: 0 0 10px white!important;
+}
+select{
+    cursor: pointer;
+}
+option{
+    
+    color: black !important;
+}
+#rdatanasc{
+    cursor: pointer;
+}
+
+.modal{
+    margin-top: 15%;
+}
+
+@media (max-width: 480px) {
+  .modal{
+    margin-top: 50%;
+  }
+}
