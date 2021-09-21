@@ -46,11 +46,12 @@ function renderizarCarrossel() { //percorre os itens e faz uma requisição para
         'tt1235841', //medianeiras
     ]
     filmes.forEach((filme,index) => { //para cada elemento carrega o filme da API
-        console.log(filme)
         carregarFilme(filme).done(result => {
             $(`#poster-${index}`).attr('src', result.Poster);
             $(`#poster-${index}`).data('imdb', filme);
-            console.log(result)
         })
     })
 }
+$('.carousel-item').click(function(event){ //função para direcionar para a página de informações
+    location.href = `./info.html?id=${$(`#${event.target.id}`).data('imdb')}`
+})
