@@ -51,7 +51,7 @@ function buscaCep(cep){
             //    type: 'GET',
             //    dataType: 'JSON'
             }).responseJSON;
-            console.log(reqcep)
+            
             if(reqcep.erro !== true){
                 $('#rua').val(`${reqcep.logradouro}`);
                 $('#num').prop('disabled', false).focus();
