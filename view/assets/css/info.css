@@ -24,3 +24,21 @@
 .btn-carrossel{
     filter:none!important;
 }
+.btn-modal{
+    background: #F3235F!important;
+    color:#e8e8e8!important;
+}
+.btn:focus{
+    box-shadow:none!important;
+}
+.btn-modal:hover{
+    transform: scale(1.01);
+}
+.font-title-modal{
+    color: #F3235F;
+    font-family: 'Julius Sans One';
+    font-weight: bold;
+}
+.font-corpo-modal{
+    color: #F3235F;
+}
