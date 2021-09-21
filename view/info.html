@@ -66,29 +66,50 @@
     </nav>
   </header>
 
-  <main class="container fonte-corpo card-info mt-5 pt-5">
-    <div class="row">
-      <figure class=" d-flex flex-column align-items-center col-12 col-lg-6">
-        <img class="w-100 largura-max my-3 poster-card" id="poster" src="">
-      </figure>
-      <div class="col-12 col-lg-6 p-3 ">
-        <h1 class="fw-bold" id="titulo"></h1>
-        <p id="ano"></p>
-        <p id="sinopse"></p>
-        <label for="atores"><i class="fas fa-theater-masks"></i> Elenco</label>
-        <p id="atores"></p>
-        <label for="direcao"><i class="fas fa-video"></i> Direção</label>
-        <p id="direcao"></p>
-        <label for="direcao"><i class="fas fa-clock"></i> Duração</label>
-        <p id="duracao"></p>
-        <label for="direcao"><i class="fas fa-film"></i> Gênero</label>
-        <p id="genero"></p>
-        <label for="star-film">Avalie esse título</label>
-        <star-film data-rating="0"></star-film>
+<main class="container fonte-corpo card-info mt-5 pt-5">
+  <div class="row">
+    <figure class=" d-flex flex-column align-items-center col-12 col-lg-6">
+      <img class="w-100 largura-max my-3 poster-card" id="poster" src="">
+    </figure>
+    <section class="col-12 col-lg-6 p-4 ">
+      <h1 class="fw-bold" id="titulo"></h1>
+      <p id="ano"></p>
+      <p id="sinopse"></p>
+      <label for="atores"><i class="fas fa-theater-masks"></i> Elenco</label>
+      <p id="atores"></p>
+      <label for="direcao"><i class="fas fa-video"></i> Direção</label>
+      <p id="direcao"></p>
+      <label for="direcao"><i class="fas fa-clock"></i> Duração</label>
+      <p id="duracao"></p>
+      <label for="direcao"><i class="fas fa-film"></i> Gênero</label>
+      <p id="genero"></p>
+      <label for="star-film">Avalie esse título</label>
+      <star-film data-rating="0"></star-film>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="far fa-play-circle"></i> Assistir
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-title-modal" id="exampleModalLabel">ResiliaFlix</h5>
+              <button type="button" class=" btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body font-corpo-modal">
+              <p><i class="fas fa-code"></i> Recurso em desenvolvimento.<br>Para mais informações, entrar em contato com a equipe.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-modal"><a class="nav-link btn-modal" href="./contato.html"><i class="fas fa-comment-dots"></i>
+                Contato</a></button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
-
+    </section>
+  </div>
+</main>
 
     <!--Carrossel-->
     <main class="fonte-corpo margin-carrossel">
