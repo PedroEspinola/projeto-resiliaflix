@@ -21,7 +21,6 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
      
     const cadastro = []
     const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, email, sex, estciv);
-
     const endereco = new Endereco(cep, rua, num, comp, bairro, city, est);
 
     cadastro.push(pessoa, endereco);
@@ -32,7 +31,7 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     db.gravar(id, cadastro)
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
-    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#msgSuccess').html(`Seu Usuario é:\n ${cpf} \n Sua Senha é: \n ${email}`);
     $('#showModalSuccess').modal('show');
 }
 
