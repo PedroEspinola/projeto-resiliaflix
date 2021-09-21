@@ -8,7 +8,7 @@
   <title>ResiliaFlix</title>
 
   <!--CSS-->
-  <link rel="stylesheet" href="/view/assets/css/index.css">
+  <link rel="stylesheet" href="./view/assets/css/index.css">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +19,7 @@
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <!--Icon-->
-  <link rel="shortcut icon" href="img/logo/icone.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./view/assets/img/logo/icone.png" type="image/x-icon">
 
 </head>
 
@@ -27,7 +27,7 @@
   <header>
     <!--Menu de navegação-->
     <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top ">
-      <div class="container-fluid">
+      <section class="container-fluid">
         <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="./index.html">ResiliaFlix</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,110 +35,117 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100 d-flex justify-content-between ">
-            <li class="nav-item">
+            <li class="nav-item text-center">
               <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
             </li>
-            <div class="d-flex">
+            <div class="d-flex nav-media">
             <li class="nav-item ">
-
-
-            <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="/view/contato.html"><i class="fas fa-comment-dots"></i>
+              <a class="nav-link fonte-nav fs-6 p-3 div-media" href="./view/contato.html"><i class="fas fa-comment-dots"></i>
                 Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="/view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+              <a class="nav-link fonte-nav fs-6 p-3" href="./view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
             </li>
             <!-- Botão login e dados-->
             <div class="btn-group ">
-              <button class="btn  btn-lg" type="button">
-                <a class="nav-link fonte-nav fs-6"  href="/view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
+              <button class="btn  btn-lg btn-login" type="button">
+                <a class="nav-link fonte-nav fs-6"  href="./view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
               </button>
-              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav"
+              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav btn-login"
                 data-bs-toggle="dropdown" aria-expanded="false">
               </button>
-              <ul class="dropdown-menu fonte-nav fs-6 w-1">
-                <a class="nav-link" href="/view/consulta.html"> Meus dados</a>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media ">
+                <a class="nav-link px-4" href="./view/consulta.html"> Meus dados</a>
               </ul>
             </div>
-          </li>
           </ul>
         </div>
-        </div>
-      </div>
+      </section>
     </nav>
   </header>
 
-  <main class="fonte-corpo padding-carrossel">
+  <main class="fonte-corpo margin-carrossel">
     <!--Carrossel-->
     <label for="carrossel">Filmes sugeridos</label>
-    <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="6000">
-          <img class="poster-carrossel" id="poster-0" src="" class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-1" src="" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-2" src="" class=class="w-25" alt="...">
+        <div class="carousel-item active">
+          <figure class="d-flex justify-content-center align-items-center">
+            <img class="poster-carrossel w-25 m-2" id="poster-0" src=""  alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-1" src="" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-2" src=""  alt="...">
+          </figure>
         </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img class="poster-carrossel" id="poster-3" src="" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-4" src="" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-5" src="" class=class="w-25" alt="...">
+        <div class="carousel-item">
+          <figure class="d-flex justify-content-center align-items-center ">
+            <img class="poster-carrossel w-25 m-2" id="poster-3" src="" class= alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-4" src="" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-5" src="" alt="...">
+          </figure>
         </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img class="poster-carrossel" id="poster-6" src="" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-7" src="" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-8" src="" class=class="w-25" alt="...">
+        <div class="carousel-item">
+          <figure class="d-flex justify-content-center align-items-center ">
+            <img class="poster-carrossel w-25 m-2" id="poster-6" src="" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-7" src="" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-8" src="" alt="...">
+          </figure>
         </div>
-        <div class="carousel-item" data-bs-interval="30000">
-          <img class="poster-carrossel" id="poster-9" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-10" class=class="w-25" alt="...">
-          <img class="poster-carrossel" id="poster-11" class=class="w-25" alt="...">
+        <div class="carousel-item">
+          <figure class="d-flex justify-content-center align-items-center ">
+            <img class="poster-carrossel w-25 m-2" id="poster-9" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-10" alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-11" alt="...">
+          </figure>
         </div>
+      </div>
+      <div class="">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
       <div class="carousel-indicators position-relative">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active "
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </section>
 
     <!--Trailer Matrix-->
     <section class="lancamento">
-      <label for="trailer">Em breve - Matrix Resurrections</label>
+      <label class="font-trailer" for="trailer"> Em breve <h1> Matrix Resurrections</h1></label>
       <iframe id="trailer" src="./view/assets/videos/trailerMatrix.mp4"></iframe>
     </section>
   </main>
 
  <!--Rodapé-->
   <footer class="mb-auto navbar-estilo media-footer">
-    <div class="container-fluid ">
-      <div class="row">
-        <div class="col-6 col-md-4 d-flex">
-
-          <div class="d-flex col-3 col-md-2 align-self-center  ">
-            <a href="index.html"><img src="view/assets/img/logo/logo.png" width="70"></a>
-          </div>
-          <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-        <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
+    <section class="container-fluid ">
+      <div class="row media-footer">
+        <div class="col-6 col-md-4 d-flex div-media align-items-center">
+          <figure class="d-flex col-3 col-md-2 align-self-center">
+            <a href="index.html"><img src="./view/assets/img/logo/logo.png" width="70"></a>
+          </figure>
+          <div class="col-3 col-md-2 d-flex mx-3">
+          <a class=" nav-link fonte-logo fw-bold fs-4 fonte-footer" href="index.html">ResiliaFlix</a>
           </div>
         </div>
-
-        <div class="col-6 col-md-4 d-flex justify-content-center align-self-center">
-
+        <div class="col-6 col-md-4 d-flex justify-content-center align-self-center div-media">
           <h6 class="fonte-corpo fonte-nav">Todos os direitos Reservados ©</h6>
         </div>
       </div>
-    </div>
+    </section>
   </footer>
   <!--/Rodapé-->
 
