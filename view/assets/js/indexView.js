@@ -20,7 +20,7 @@ function buscarFilmes() { //função para exibição dos posteres
 
 
         $.ajax({
-            url: `http://www.omdbapi.com/?apikey=2802824f&i=${filme}`,
+            url: `https://www.omdbapi.com/?apikey=2802824f&i=${filme}`,
             type: 'GET',
             dataType: 'json',
                 success: function(result){
