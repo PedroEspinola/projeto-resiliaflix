@@ -28,7 +28,7 @@
         <!--Menu de navegação-->
         <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top ">
             <div class="container-fluid">
-                <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="./index.html">ResiliaFlix</a>
+                <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="..//index.html">ResiliaFlix</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,21 +39,21 @@
                         </li>
                         <div class="d-flex nav-media">
                             <li class="nav-item ">
-                                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="./view/contato.html"><i class="fas fa-comment-dots"></i>
+                                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>
                 Contato</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fonte-nav fs-6 p-3" href="./view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+                                <a class="nav-link fonte-nav fs-6 p-3" href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
                             </li>
                             <!-- Botão login e dados-->
                             <div class="btn-group ">
                                 <button class="btn  btn-lg" type="button">
-                <a class="nav-link fonte-nav fs-6"  href="./view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
+                <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
               </button>
                                 <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav" data-bs-toggle="dropdown" aria-expanded="false">
               </button>
                                 <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media">
-                                    <a class="nav-link px-4" href="./view/consulta.html"> Meus dados</a>
+                                    <a class="nav-link px-4" href="consulta.html"> Meus dados</a>
                                 </ul>
                             </div>
                             </li>
@@ -68,21 +68,23 @@
         <div id="centro">
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"></label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu Email">
-                    <div id="emailHelp" class="form-text">Nós nunca iremos dividir seu email com ninguém.</div>
+                    <label for="exampleInputEmail1" class="form-label">Digite seu CPF:</label>
+                    <input type="email" class="form-control" id="cpf" aria-describedby="emailHelp" placeholder="12345678910">
+                    <div id="emailHelp" class="form-text">Nós nunca iremos dividir seu CPF com ninguém.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"></label>
-                    <input type="password" class="form-control" id="senha" placeholder="Senha">
+                    <label for="exampleInputPassword1" class="form-label">Digite sua Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="*********">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
                 </div>
-                <button onclick="login()" type="submit" class="btn btn-primary">Login</button>
                 <br>
-                <a href="#">Não possui conta? clique aqui!</a>
+                <button onclick="login()" type="submit" class="btn btn-outline-success" id="btnLogin">Login</button>
+                <br>
+                <br>
+                <a href="cadastro.html">Não possui conta? clique aqui!</a>
                 <br>
                 <a href="#">Esqueci minha Senha</a>
             </form>
@@ -92,16 +94,35 @@
 
     </main>
 
+
+     <!--Modal-->
+     <div class="modal" tabindex="-1" id="showModalError">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger" id="tituloErro"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="msgErro"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Modal-->
     <footer class="mb-auto navbar-estilo media-footer fixed-bottom">
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-6 col-md-4 d-flex">
 
                     <div class="d-flex col-3 col-md-2 align-self-center  ">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" width="70"></a>
+                        <a href="../index.html"><img src="assets/img/logo/logo.png" width="70"></a>
                     </div>
                     <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-                        <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
+                        <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="../index.html">ResiliaFlix</a>
                     </div>
                 </div>
 
@@ -122,7 +143,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="./js/login.js"></script>
+    <script src="assets/js/loginView.js"></script>
+    <script src="../controller/loginController.js"></script>
+    <script src="../model/Login.js"></script>
 
 </body>
 

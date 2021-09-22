@@ -1,6 +1,5 @@
 document.getElementById("btnPesquisar").addEventListener("click", function(event){
     event.preventDefault()
-    console.log('cheguei')
 });
 
 document.getElementById("btnLimparEnd").addEventListener("click", function(event){
@@ -100,3 +99,4 @@ function pesquisaCEP(){
     buscaCep(cep)
         
 }
+
