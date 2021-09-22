@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.pageBusca{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+    height: 87.3vh;
+    background: #1B1B1B;
+    color: #e8e8e8;
+
+}
+
+.barraDePesquisa {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+.contentCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+    margin-top: 40px;
+    padding: 20px;
+    overflow-y:scroll ;
+}
+
+.cardFilme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    height: 350px;
+    margin: 5px 15px;
+    border-radius: 2px;
+    margin: 3% 1%;
+   
+    box-shadow: 5px 5px 8px rgba(243, 35, 95, 0.5);
+}
+
+.cardFilme>img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+    
+.cardFilme>img:hover{
+
+
+}
+
+
+.fonte-corpo{
+    font-family: 'Source Code Pro';
+    color:#e8e8e8 }
+
+    .invisivel {
+        display: none;
+    }
