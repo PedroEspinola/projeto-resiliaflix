@@ -34,7 +34,7 @@
     font-family: 'Source Code Pro';
     color:#e8e8e8
 }
-.margin-carrossel{
+.margin-top{
     margin-top: 5rem;
 }
 .poster-carrossel{
@@ -49,6 +49,7 @@
 #trailer{
     width: 100%;
     height: 80vh;
+    box-shadow: 0px 0px 15px 0px #000;
 }
 
 .font-trailer{
@@ -56,6 +57,24 @@
 }
 .btn-login:focus{
     box-shadow:none!important;
+}
+.div-principal{
+    background: #e8e8e8;
+    color: #1b1b1b!important;
+}
+.div-secundaria{
+    background: #F3235F;
+}
+.duvidas{
+    font-family: 'Source Code Pro';
+    border-radius: 1rem;
+    box-shadow:0px 0px 20px 5px #000;
+    color: #e8e8e8
+}
+ .duvidas:hover{
+    transform: scale(1.01);
+    transition: 0.2s ease-out;
+    box-shadow: 0 0px 15px 0 #000;
 }
 /*******
 *FOOTER*

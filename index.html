@@ -39,46 +39,59 @@
               <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
             </li>
             <div class="d-flex nav-media">
-            <li class="nav-item ">
-              <a class="nav-link fonte-nav fs-6 p-3 div-media" href="./view/contato.html"><i class="fas fa-comment-dots"></i>
-                Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="./view/cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
-            </li>
-            <!-- Botão login e dados-->
-            <div class="btn-group ">
-              <button class="btn  btn-lg btn-login" type="button">
-                <a class="nav-link fonte-nav fs-6"  href="./view/login.html"> <i class="fas fa-user-circle"></i> Login</a>
-              </button>
-              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav btn-login"
-                data-bs-toggle="dropdown" aria-expanded="false">
-              </button>
-              <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media ">
-                <a class="nav-link px-4" href="./view/consulta.html"> Meus dados</a>
-              </ul>
-            </div>
+              <li class="nav-item ">
+                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="./view/contato.html"><i
+                    class="fas fa-comment-dots"></i>
+                  Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fonte-nav fs-6 p-3" href="./view/cadastro.html"><i class="fas fa-user-plus"></i>
+                  Cadastro</a>
+              </li>
+              <!-- Botão login e dados-->
+              <div class="btn-group ">
+                <button class="btn  btn-lg btn-login" type="button">
+                  <a class="nav-link fonte-nav fs-6" href="./view/login.html"> <i class="fas fa-user-circle"></i>
+                    Login</a>
+                </button>
+                <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav btn-login"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media ">
+                  <a class="nav-link px-4" href="./view/consulta.html"> Meus dados</a>
+                </ul>
+              </div>
           </ul>
         </div>
       </section>
     </nav>
   </header>
 
-  <main class="fonte-corpo margin-carrossel">
+  <main class="fonte-corpo margin-top">
+    <!--Trailer Matrix-->
+    <section class="lancamento">
+      <div>
+        <label for="trailer" class="d-flex flex-column m-3">
+          <h1 class="font-trailer m-0">Matrix Resurrections</h1>Em breve nos cinemas e também em nossa plataforma
+        </label>
+      </div>
+      <iframe id="trailer" src="./view/assets/videos/trailerMatrix.mp4"></iframe>
+    </section>
+
     <!--Carrossel-->
-    <label for="carrossel">Filmes sugeridos</label>
+    <label for="carrossel"class="m-3 fw-bold fs-5">Filmes sugeridos</label>
     <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <figure class="d-flex justify-content-center align-items-center">
-            <img class="poster-carrossel w-25 m-2" id="poster-0" src=""  alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-0" src="" alt="...">
             <img class="poster-carrossel w-25 m-2" id="poster-1" src="" alt="...">
-            <img class="poster-carrossel w-25 m-2" id="poster-2" src=""  alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-2" src="" alt="...">
           </figure>
         </div>
         <div class="carousel-item">
           <figure class="d-flex justify-content-center align-items-center ">
-            <img class="poster-carrossel w-25 m-2" id="poster-3" src="" class= alt="...">
+            <img class="poster-carrossel w-25 m-2" id="poster-3" src="" class=alt="...">
             <img class="poster-carrossel w-25 m-2" id="poster-4" src="" alt="...">
             <img class="poster-carrossel w-25 m-2" id="poster-5" src="" alt="...">
           </figure>
@@ -121,15 +134,26 @@
           aria-label="Slide 4"></button>
       </div>
     </section>
-
-    <!--Trailer Matrix-->
-    <section class="lancamento">
-      <label class="font-trailer" for="trailer"> Em breve <h1> Matrix Resurrections</h1></label>
-      <iframe id="trailer" src="./view/assets/videos/trailerMatrix.mp4"></iframe>
-    </section>
   </main>
 
- <!--Rodapé-->
+  <!--Informações sobre a plataforma-->
+  <section class="row d-flex justify-content-center identidade  my-5">
+    <div class="col-12 col-lg-3 duvidas  p-4 m-1">
+      <p class="fw-bold fs-5">Que tipo de conteúdo pode ser encontrado aqui?</p>
+      <p>Nosso catálogo de filmes conta com variados títulos. Buscamos cada vez mais expandir as opções de conteúdo para contemplar a diversidade de gêneros cinematográficos. O conteúdo pode variar conforme sua região e também pode mudar com seu plano.</p>
+
+    </div>
+    <div class="col-12 col-lg-3 duvidas div-principal p-4 m-1">
+      <p class="fw-bold fs-5">O que é a ResiliaFlix?</p>
+      <p>Somos um serviço de streaming por assinatura que permite assistir a séries e filmes sem comerciais e com exibibição simultanea de títulos distintos em multiplas telas. Você também pode baixar seus títulos favoritos em aparelhos iOS, Android ou Windows 10 para assistir quando não tiver internet.</p>
+    </div>
+    <div class="col-12 col-lg-3 duvidas p-4 m-1">
+      <p class="fw-bold fs-5">Como posso ser um assinante?</p>
+      <p>Para isso, basta escolher um de nossos planos e realizar seu cadastro, depois é só explorar a plataforma e os  recursos disponibilizados, aproveite o conteúdo personalizado para seu perfil e lançamentos. Qualquer dúvida, entre em contato com nossa equipe.</p>
+    </div>
+  </section>
+
+  <!--Rodapé-->
   <footer class="mb-auto navbar-estilo media-footer">
     <section class="container-fluid ">
       <div class="row media-footer">
@@ -138,7 +162,7 @@
             <a href="index.html"><img src="./view/assets/img/logo/logo.png" width="70"></a>
           </figure>
           <div class="col-3 col-md-2 d-flex mx-3">
-          <a class=" nav-link fonte-logo fw-bold fs-4 fonte-footer" href="index.html">ResiliaFlix</a>
+            <a class=" nav-link fonte-logo fw-bold fs-4 fonte-footer" href="index.html">ResiliaFlix</a>
           </div>
         </div>
         <div class="col-6 col-md-4 d-flex justify-content-center align-self-center div-media">
