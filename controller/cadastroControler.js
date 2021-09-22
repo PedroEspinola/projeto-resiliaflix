@@ -21,7 +21,6 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
      
     const cadastro = []
     const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, email, sex, estciv);
-
     const endereco = new Endereco(cep, rua, num, comp, bairro, city, est);
 
     cadastro.push(pessoa, endereco);
@@ -32,7 +31,7 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,
     db.gravar(id, cadastro)
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
-    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#msgSuccess').html(`Seu Usuario é:${cpf} \n Sua Senha é: \n ${email}`);
     $('#showModalSuccess').modal('show');
 }
 
@@ -52,13 +51,20 @@ function buscaCep(cep){
             //    type: 'GET',
             //    dataType: 'JSON'
             }).responseJSON;
-            $('#rua').val(`${reqcep.logradouro}`);
-            $('#num').prop('disabled', false).focus();
-            $('#comp').prop('disabled', false); 
-            $('#bairro').val(`${reqcep.bairro}`);
-            $('#city').val(`${reqcep.localidade}`);
-            $('#est').val(`${reqcep.uf}`);
-           
+            
+            if(reqcep.erro !== true){
+                $('#rua').val(`${reqcep.logradouro}`);
+                $('#num').prop('disabled', false).focus();
+                $('#comp').prop('disabled', false); 
+                $('#bairro').val(`${reqcep.bairro}`);
+                $('#city').val(`${reqcep.localidade}`);
+                $('#est').val(`${reqcep.uf}`);
+            }else{
+                $('#tituloErro').html('CEP Não Encontrado');
+                $('#msgErro').html(`Houve um erro durante a Busca do CEP! \n Tente novamente, use Somente NUMEROS! \n Erro: ${error}`);
+                $('#showModalError').modal('show');
+            }
+            
         } catch (error) {
             $('#tituloErro').html('Erro!');
             $('#msgErro').html(`Houve um erro durante a Busca do CEP! \n Tente novamente, use Somente NUMEROS! \n Erro: ${error}`);

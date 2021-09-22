@@ -11,23 +11,23 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0,0.5);
 }
 .conteudo-central{
-    padding-top: 30vh;  
+    padding-top: 30vh;
+    padding-bottom: 10vh;  
 }
 
 .contatos-card{
     text-align: center;
     color: #e8e8e8;
     font-family: 'Source Code Pro', monospace;
-    border-radius:0.3rem!important;
-    box-shadow:0 0 20px rgba(0,0,0,0.40);   
-    width: 16vw!important;
-    background-color:#F3235F!important;
+    border-radius:0.3rem!important;  
+    max-width: 16vw;
+    background-color:#F3235F!important; 
 }
 
 img:hover{
     transform: scale(1.02);
     transition: 0.4s ease-out;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0,0.9);
+    box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0,0.9);
 }
 
 #img-dev{
@@ -44,17 +44,19 @@ img:hover{
 }
 .elementos-card{
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    height: 15vh;
-}
-.nome-dev{
-    width: 8vw;
-    position: relative;
-    align-self: center;
-    color: rgb(235, 231, 231);
+    flex-flow: column nowrap;
+    /* justify-content: space-around; */
+    /* align-items: stretch; */
+ 
     
 }
+.nome-dev{
+    
+    width: 100%;
+    position:relative;
+    color: rgb(235, 231, 231);
+}
+
 .nome-dev:after,
 .nome-dev:before{
     content: "";

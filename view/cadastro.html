@@ -25,8 +25,8 @@
 
   <header>
     <!--Menu de navegação-->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-estilo fixed-top ">
+      <section class="container-fluid">
         <a class="navbar-brand fonte-logo fw-bold fs-3 p-2" href="../index.html">ResiliaFlix</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,39 +34,35 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100 d-flex justify-content-between ">
-            <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="./pagBusca.html"><i class="fas fa-search"></i> Buscar</a>
+            <li class="nav-item text-center">
+              <a class="nav-link fonte-nav fs-6 p-3" href="/view/"><i class="fas fa-search"></i> Buscar</a>
             </li>
-            <div class="d-flex">
+            <div class="d-flex nav-media">
             <li class="nav-item ">
-
-
-            <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="./contato.html"><i class="fas fa-comment-dots"></i>
+              <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>
                 Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fonte-nav fs-6 p-3" href="./cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
+              <a class="nav-link fonte-nav fs-6 p-3" href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
             </li>
             <!-- Botão login e dados-->
             <div class="btn-group ">
-              <button class="btn  btn-lg" type="button">
-                <a class="nav-link fonte-nav fs-6"  href="./login.html"> <i class="fas fa-user-circle"></i> Login</a>
+              <button class="btn  btn-lg btn-login" type="button">
+                <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
               </button>
-              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav"
+              <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav btn-login"
                 data-bs-toggle="dropdown" aria-expanded="false">
               </button>
-              <ul class="dropdown-menu fonte-nav fs-6 w-1">
-                <a class="nav-link" href="./consulta.html"> Meus dados</a>
+              <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media ">
+                <a class="nav-link px-4" href="consulta.html"> Meus dados</a>
               </ul>
             </div>
-          </li>
           </ul>
         </div>
-        </div>
-      </div>
+      </section>
     </nav>
   </header>
+
 
 
     <main>
@@ -230,10 +226,10 @@
           <div class="col-6 col-md-4 d-flex">
   
             <div class="d-flex col-3 col-md-2 align-self-center  ">
-              <a href="index.html"><img src="assets/img/logo/logo.png" width="70"></a>
+              <a href="../index.html"><img src="assets/img/logo/logo.png" width="70"></a>
             </div>
             <div class="col-3 col-md-2 d-flex align-self-center mt-auto mx-3">
-          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="index.html">ResiliaFlix</a>
+          <a class=" nav-link fonte-logo fw-bold fs-5 fonte-footer" href="../index.html">ResiliaFlix</a>
             </div>
           </div>
   
