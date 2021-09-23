@@ -39,8 +39,7 @@
                         </li>
                         <div class="d-flex nav-media">
                             <li class="nav-item ">
-                                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>
-                Contato</a>
+                                <a class="nav-link fonte-nav fs-6 p-3 div-media" href="contato.html"><i class="fas fa-comment-dots"></i>  Contato</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fonte-nav fs-6 p-3" href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a>
@@ -48,10 +47,10 @@
                             <!-- Botão login e dados-->
                             <div class="btn-group ">
                                 <button class="btn  btn-lg" type="button">
-                <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
-              </button>
+                                  <a class="nav-link fonte-nav fs-6"  href="login.html"> <i class="fas fa-user-circle"></i> Login</a>
+                                </button>
                                 <button type="button" class="btn btn-lg  dropdown-toggle dropdown-toggle-split fonte-nav" data-bs-toggle="dropdown" aria-expanded="false">
-              </button>
+                                </button>
                                 <ul class="dropdown-menu fonte-nav fs-6 w-1 position-media">
                                     <a class="nav-link px-4" href="consulta.html"> Meus dados</a>
                                 </ul>
@@ -68,9 +67,8 @@
         <div id="centro">
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Digite seu CPF:</label>
-                    <input type="email" class="form-control" id="cpf" aria-describedby="emailHelp" placeholder="12345678910">
-                    <div id="emailHelp" class="form-text">Nós nunca iremos dividir seu CPF com ninguém.</div>
+                    <label for="exampleInputEmail1" class="form-label">Digite Seu email</label>
+                    <input type="email" class="form-control" id="senha" placeholder="exemplo@exemplo.com" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Digite sua Senha:</label>
@@ -82,11 +80,38 @@
                 </div>
                 <br>
                 <button onclick="login()" type="submit" class="btn btn-outline-success" id="btnLogin">Login</button>
-                <br>
+
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   Esqueci a senha
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Digite seu email</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="exemplo@exemplo.com" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Nos nunca iremos dividir seus dados.</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-outline-success">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br>
                 <a href="cadastro.html">Não possui conta? clique aqui!</a>
-                <br>
-                <a href="#">Esqueci minha Senha</a>
             </form>
 
 
@@ -104,7 +129,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="msgErro"></p>
+                    <p> Digite um email válido.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
@@ -137,6 +162,10 @@
         </div>
         </div>
     </footer>
+
+
+
+
     <!--/Rodapé-->
 
     <!--Jquery | BootstrapScript-->
