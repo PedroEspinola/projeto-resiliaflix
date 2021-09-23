@@ -10,5 +10,4 @@ function validaLogin(id , pass){
         $('#showModalError').modal('show');
     }
 
-    console.log(log._email)
 }
