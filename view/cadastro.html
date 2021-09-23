@@ -95,13 +95,17 @@
 
               <div class="row">
                 <div class="form-group col-12 col-md-6 col-lg-3">
+
+                  <label for="rg">RG:</label>
+                  <input class="form-control" type="number" name="rg" id="rg" required placeholder="12345678" class="form-group col-12 col-md-6 col-lg-3">
+                </div>
+
+                <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="nome">Tel/Cel:</label>
                   <input class="form-control" type="number" name="cel" id="cel" placeholder="11912349321" required size="11" maxlength="11"onkeyup="somenteNumeros(this)">
                 </div>
-                <div class="form-group col-12 col-md-6 col-lg-3">
-                  <label for="nome">Email:</label>
-                  <input class="form-control" type="email" name="email" id="email" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50">
-                </div>
+                
+                
                 <div class="form-group col-12 col-md-6 col-lg-3">
                   <label for="sex">Sexo:</label>
                   <select class="form-control" name="sex" id="sex" required>
@@ -127,7 +131,25 @@
                 <hr>
               </div><!-- Info Pessoais-->
 
-              <div class="row"><!--Endereço-->
+              <div class="container"><!--InfoAcesso-->
+                <div class="row">
+                  <h4>Infomações de Acesso:</h4>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="demail">
+                    <label for="id">Email:</label>
+                    <input class="form-control" type="email" name="id" id="id" placeholder="exemplo@exemplar.com.br" size="50" required maxlength="50">
+                  </div>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="dsenha">
+                    <label for="senha">Senha:</label>
+                    <input class="form-control" type="password" name="senha" id="senha" placeholder="*********" size="50" required maxlength="50">
+                  </div>
+                  <div class="form-group col-12 col-md-6 col-lg-3" id="dcsenha">
+                    <label for="csenha">Confirme sua Senha:</label>
+                    <input class="form-control" type="password" name="csenha" id="csenha" placeholder="********" size="50" required maxlength="50">
+                  </div>
+                </div>
+              </div><!--/infoAcesso-->
+
+              <div class="row mt-5"><!--Endereço-->
                 <h4 class="">Informe seu CEP e Confirme seu endereço:</h4>
 
                 <div class="form-group  col-12 col-md-6 " >
@@ -177,6 +199,7 @@
 
                 <div class="mb-5"></div>
               </div><!--/Endereço-->
+               
             </form>
 
         </section><!--/Formulario-->
@@ -220,7 +243,7 @@
       </div>
       <!--/Modal-->
 
-    <footer class="mb-auto navbar-estilo media-footer fixed-bottom">
+    <footer class="mb-auto navbar-estilo media-footer ">
       <div class="container-fluid ">
         <div class="row">
           <div class="col-6 col-md-4 d-flex">

@@ -17,21 +17,22 @@ function validaInput(...variaveis){
 /*
 controler
 */
-function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,comp,bairro,city,est){
+function criarCadastro(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,num,comp,bairro,city,est,id,senha){
      
     const cadastro = []
-    const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, email, sex, estciv);
+    const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, rg, sex, estciv);
     const endereco = new Endereco(cep, rua, num, comp, bairro, city, est);
-
-    cadastro.push(pessoa, endereco);
+    const log = new Login(id,senha)
+    console.log(pessoa,endereco,log)
+    cadastro.push(pessoa, endereco,log);
 
    // console.log(cadastro, 'eu sou a constante');
-    let id = pessoa._id;
+    id = log._id;
     db = new Db();
     db.gravar(id, cadastro)
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
-    $('#msgSuccess').html(`Seu Usuario é:${cpf} \n Sua Senha é: \n ${email}`);
+    $('#msgSuccess').html(`Seu Usuario é:${id} \n Sua Senha é: \n ${senha}`);
     $('#showModalSuccess').modal('show');
 }
 
