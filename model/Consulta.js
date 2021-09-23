@@ -1,23 +1,23 @@
 class Pessoa {
-    constructor(cpf,nome,snome,datanasc,cel,email,sex,estciv){
+    constructor(cpf,nome,snome,datanasc,cel,rg,sex,estciv){
         //super(cep,rua,num,comp,bairro,city,est);
-        this._id = cpf,
+        this._cpf = cpf,
         this._nome = nome,
         this._snome = snome,
         this._datanasc = datanasc,
         this._cel = cel,
-        this._email = email,
+        this._rg = rg,
         this._sex = sex,
         this._estciv = estciv
     }
-    setpesonalData(cpf,nome,snome,datanasc,cel,email,sex,estciv){
-        if(cpf!==''&& nome!==''&&snome!==''&&datanasc!==''&&cel!==''&&email!==''&&sex!==''&&estciv!==''){
-            this._id = cpf,
+    setpesonalData(cpf,nome,snome,datanasc,cel,rg,sex,estciv){
+        if(cpf!==''&& nome!==''&&snome!==''&&datanasc!==''&&cel!==''&&rg!==''&&sex!==''&&estciv!==''){
+            this._cpf = cpf,
             this._nome = nome,
             this._snome = snome,
             this._datanasc = datanasc,
             this._cel = cel,
-            this._email = email,
+            this._rg = rg,
             this._sex = sex,
             this._estciv = estciv
         }else{
@@ -26,21 +26,20 @@ class Pessoa {
        
     }
     getpersonalData(){
-        return this._nome,this._snome,this._datanasc,this._cel,this._email,this._sex,this._estciv
+        return this._nome,this._snome,this._datanasc,this._cel,this._rg,this._sex,this._estciv
     }
     imprimirDadosPessoais(){
-        console.log( this._id,
-            this._nome,
-            this._snome,
-            this._datanasc,
-            this._cel,
-            this._email,
-            this._sex,
-            this._estciv);
+        console.log( this.id,
+            this.nome,
+            this.snome,
+            this.datanasc,
+            this.cel,
+            this.rg,
+            this.sex,
+            this.estciv);
     }
 
 }
-
 
 /* 
 Model
@@ -85,14 +84,18 @@ class Endereco{
     }
 }
 
+class Login{
+    constructor(id,senha){
+        this._id = id;
+        this._senha = senha;
+    }
+}
 class Db{
     gravar(id, arr){
         localStorage.setItem(id, JSON.stringify(arr))
     }
     consultar(id){
         try {
-            id = parseInt(id)
-            console.log(id)
             const cadastro = JSON.parse(localStorage.getItem(id))
             if(cadastro == null){
                 $('#tituloErro').html('Usuario Não encontrado!');

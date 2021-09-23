@@ -2,11 +2,11 @@ function validaLogin(id , pass){
     let db = new Db();
     let log = db.consultar(id)
 
-    if(pass == log[0]._email){
+    if(pass == log[2]._senha){
         window.location.href = '../index.html'
     }else{
         $('#tituloErro').html('Usuario Incorreto');
-        $('#msgErro').html('Verifique se o CPF e Senha foi Digitado Corretamente!!')
+        $('#msgErro').html('Verifique se o Email e Senha foi Digitado Corretamente!!')
         $('#showModalError').modal('show');
     }
 

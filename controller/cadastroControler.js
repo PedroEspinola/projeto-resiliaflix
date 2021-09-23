@@ -3,7 +3,7 @@ controler
 */
 function validaInput(...variaveis){
     for(let i=0 ; i <= variaveis.length ; i++){
-        if(variaveis[i] == ''){
+        if(variaveis[i] == '' || variaveis[i] == null){
           $('#tituloErro').html('Preencha todos os Campos');
           $('#msgErro').html('Verifique se todos os campos foram preenchidos!!')
           $('#showModalError').modal('show');
