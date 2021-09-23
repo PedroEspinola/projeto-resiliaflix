@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,500&display=swap');
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+
+}
+::-webkit-scrollbar-track{
+    background-color: #1B1B1B;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #F3235F;
+    border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #e8e8e8;
+}
+
 .background-gradient{
     background: #1B1B1B;
     height: 100vh;
@@ -47,8 +63,6 @@ img:hover{
     flex-flow: column nowrap;
     /* justify-content: space-around; */
     /* align-items: stretch; */
- 
-    
 }
 .nome-dev{
     
@@ -69,13 +83,13 @@ img:hover{
     border-radius: 0.3rem;
 }
 .nome-dev:before{
-    border-left: 0.1rem solid black;
-    border-right: 0.1rem solid black;
+    border-left: 0.1rem solid #1b1b1b;
+    border-right: 0.1rem solid #1b1b1b;
     transform: scaleY(0);
 }
 .nome-dev:after{
-    border-top: 0.1rem solid black;
-    border-bottom: 0.1rem solid black;
+    border-top: 0.1rem solid #1b1b1b;
+    border-bottom: 0.1rem solid #1b1b1b;
     transform: scaleX(0);
 }
 .nome-dev:hover::before{
@@ -87,7 +101,9 @@ img:hover{
 .nome-dev:hover{
     color:rgb(8, 8, 8);
     transition: 0.5s;
-}
+} 
+
+
 
     
 
