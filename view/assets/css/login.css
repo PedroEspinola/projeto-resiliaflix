@@ -48,6 +48,16 @@ label{
     color: white
 }
 
+form > a{
+    color: #f3235f;
+    text-decoration: none;
+}
+
+form> a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 .modal{
     margin-top: 20%;
 }
