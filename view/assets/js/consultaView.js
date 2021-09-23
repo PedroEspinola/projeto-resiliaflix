@@ -116,7 +116,7 @@ function confirmar(){
     let cel = $('#rcel').val();
     let sex = $('#rsex').val();
     let cpf = $('#rcpf').val();
-    let email = $('#remail').val();
+    let rg = $('#rg').val();
     let estciv = $('#restciv').val();
     let cep = $('#rcep').val();
     let rua = $('#rrua').val();
@@ -128,7 +128,7 @@ function confirmar(){
     
  
 
-   let validado = validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha,csenha);
+   let validado = validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha);
    console.log(validado)
    if(validado !== '' || validado !== false){
     limparCampos()
