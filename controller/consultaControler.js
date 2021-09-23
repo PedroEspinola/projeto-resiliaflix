@@ -24,7 +24,7 @@ function pegaDados(id){
         $('#csenha').val(dados[2]._senha).prop('disabled', false);
     }else{
         $('#tituloErro').html('Usuario Não Encontrado!');
-        $('#msgErro').html('Verifique se o CPF foi digitado corretamente!')
+        $('#msgErro').html('Verifique se o Email foi digitado corretamente!')
         $('#showModalError').modal('show');
     }
 }

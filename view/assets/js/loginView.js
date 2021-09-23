@@ -3,7 +3,7 @@ document.getElementById('btnLogin').addEventListener("click", function (event){
 })
 
 function login(){
-    let id = $('#cpf').val();
+    let id = $('#id').val();
     let pass = $('#senha').val()
 
     if(id !== '' && pass !== ''){
