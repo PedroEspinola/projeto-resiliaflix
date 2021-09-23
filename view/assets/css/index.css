@@ -17,6 +17,9 @@
 ::-webkit-scrollbar-thumb:hover{
     background-color: #e8e8e8;
 }
+html{
+    overflow-x:hidden;
+}   
 
 .background-corpo{
     background: #1B1B1B;
