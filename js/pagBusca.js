@@ -9,14 +9,14 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-button.addEventListener("click", (e)=>{ 
+button.addEventListener("click", (e)=>{
     e.preventDefault()
 
     let search = input.value;
           let apart = search.split(' ')
           var together = apart.join("+")
           $.ajax({
-            url:`http://www.omdbapi.com/?s=${together}&apikey=e633dcec&page=all`,
+            url:`https://www.omdbapi.com/?s=${together}&apikey=e633dcec&page=all`,
             type:"GET",
             dataType:"json",
             success:function(request){
@@ -31,10 +31,10 @@ button.addEventListener("click", (e)=>{
             }
           })
 
-   });  
+   });
 
    function mostraNaTela(arrayDeFilmes){
-    
+
      contentCards.innerHTML = ` `
      arrayDeFilmes.map(function(filme){
      const div = document.createElement("div")
@@ -46,7 +46,7 @@ button.addEventListener("click", (e)=>{
      img.id =  filme.imdbID
      contentCards.appendChild(div)
      img.addEventListener("click",function(event){
-     
+
     location.href =`../view/info.html?id=${event.target.id}`
      })
      })
