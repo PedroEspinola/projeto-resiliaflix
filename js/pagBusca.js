@@ -23,6 +23,7 @@ button.addEventListener("click", (e)=>{
               const arrayDeFilmes = request.Search
               console.log(request)
               if(request.Response === 'False'){
+                contentCards.innerHTML = ` `
                 filmeInexistente.classList.remove("invisivel")
                }else {
                 filmeInexistente.classList.add("invisivel")
