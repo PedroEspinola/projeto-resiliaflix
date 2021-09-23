@@ -143,3 +143,7 @@ function pesquisaCEP(){
     buscaCep(cep)
         
 }
+
+$('#rcpf').focus(function (){
+    $('#txtCPF').html(`você usara seu cpf para login`)
+})
