@@ -2,7 +2,7 @@
 function pegaDados(id){
     let db = new Db();
     let dados = db.consultar(id);
-
+    console.log(dados)
     if(dados !== null){
         $('#rnome').val(dados[0]._nome).prop('disabled', false).focus();
         $('#rsnome').val(dados[0]._snome).prop('disabled', false);
@@ -28,8 +28,10 @@ function pegaDados(id){
         $('#showModalError').modal('show');
     }
 }
-function validaInput(...variaveis){
+function validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha){
+    let variaveis = [cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha]
     for(let i=0 ; i <= variaveis.length ; i++){
+        console.log(variaveis[i])
         if(variaveis[i] == '' || variaveis[i] == null){
           $('#tituloErro').html('Preencha todos os Campos');
           $('#msgErro').html('Verifique se todos os campos foram preenchidos!!')
