@@ -137,7 +137,7 @@ function confirmar(){
 
    let validado = validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha);
    console.log(validado)
-   if(validado !== '' && validado !== false){
+   if(validado !== '' || validado !== false){
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
     $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');

@@ -2,12 +2,12 @@
 function pegaDados(id){
     let db = new Db();
     let dados = db.consultar(id);
-    console.log(dados)
+
     if(dados !== null){
         $('#rnome').val(dados[0]._nome).prop('disabled', false).focus();
         $('#rsnome').val(dados[0]._snome).prop('disabled', false);
         $('#rdatanasc').val(dados[0]._datanasc).prop('disabled', false);
-        $('#rcpf').val(dados[0]._id);
+        $('#rcpf').val(dados[0]._cpf);
         $('#rcel').val(dados[0]._cel).prop('disabled', false);
         $('#rg').val(dados[0]._rg)
         $('#rsex').val(dados[0]._sex).prop('disabled', false);
@@ -28,8 +28,10 @@ function pegaDados(id){
         $('#showModalError').modal('show');
     }
 }
-function validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha){
-    let variaveis = [cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha]
+
+
+function validaInput(...variaveis){
+    console.log(variaveis)
     for(let i=0 ; i <= variaveis.length ; i++){
         console.log(variaveis[i])
         if(variaveis[i] == '' || variaveis[i] == null){
@@ -37,15 +39,15 @@ function validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,ci
           $('#msgErro').html('Verifique se todos os campos foram preenchidos!!')
           $('#showModalError').modal('show');
           return false;
+
         }else{
             
             return true;
         }
     }
 }
-/*
-controler
-*/
+
+
 function criarCadastro(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,num,comp,bairro,city,est,id,senha){
      
     const cadastro = []
@@ -61,14 +63,16 @@ function criarCadastro(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,num,com
     db.gravar(id, cadastro)
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
-    $('#msgSuccess').html(`Seu Usuario é:${id} \n Sua Senha é: \n ${senha}`);
+    $('#msgSuccess').html(`Seu Usuario é: ${id} \n Sua Senha é: \n ${senha}`);
     $('#showModalSuccess').modal('show');
 }
 
 function excluirCadastro(id){
-    let db = new Db()
-    db.delete(id)
-    limparCampos()
+    let db = new Db();
+    if(id !== ''){
+        db.delete(id)
+        limparCampos()
+    }
 }
 
 function buscaCep(cep){

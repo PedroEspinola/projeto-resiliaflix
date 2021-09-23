@@ -29,7 +29,7 @@ class Pessoa {
         return this._nome,this._snome,this._datanasc,this._cel,this._rg,this._sex,this._estciv
     }
     imprimirDadosPessoais(){
-        console.log( this.id,
+        console.log( this.cpf,
             this.nome,
             this.snome,
             this.datanasc,
@@ -113,7 +113,7 @@ class Db{
     delete(id){
         localStorage.removeItem(id)
             $('#tituloSuccess').html('Usuario Excluido!');
-            $('#msgSuccess').html(`Ususario Excluido com Sucesso! Usuario:${id}`);
+            $('#msgSuccess').html(`Ususario Excluido com Sucesso! Usuario: ${id}`);
             $('#showModalSuccess').modal('show');
     }
 }
