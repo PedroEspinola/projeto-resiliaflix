@@ -1,23 +1,23 @@
 class Pessoa {
-    constructor(cpf,nome,snome,datanasc,cel,email,sex,estciv){
+    constructor(cpf,nome,snome,datanasc,cel,rg,sex,estciv){
         //super(cep,rua,num,comp,bairro,city,est);
-        this._id = cpf,
+        this._cpf = cpf,
         this._nome = nome,
         this._snome = snome,
         this._datanasc = datanasc,
         this._cel = cel,
-        this._email = email,
+        this._rg = rg,
         this._sex = sex,
         this._estciv = estciv
     }
-    setpesonalData(cpf,nome,snome,datanasc,cel,email,sex,estciv){
-        if(cpf!==''&& nome!==''&&snome!==''&&datanasc!==''&&cel!==''&&email!==''&&sex!==''&&estciv!==''){
-            this._id = cpf,
+    setpesonalData(cpf,nome,snome,datanasc,cel,rg,sex,estciv){
+        if(cpf!==''&& nome!==''&&snome!==''&&datanasc!==''&&cel!==''&&rg!==''&&sex!==''&&estciv!==''){
+            this._cpf = cpf,
             this._nome = nome,
             this._snome = snome,
             this._datanasc = datanasc,
             this._cel = cel,
-            this._email = email,
+            this._rg = rg,
             this._sex = sex,
             this._estciv = estciv
         }else{
@@ -26,7 +26,7 @@ class Pessoa {
        
     }
     getpersonalData(){
-        return this._nome,this._snome,this._datanasc,this._cel,this._email,this._sex,this._estciv
+        return this._nome,this._snome,this._datanasc,this._cel,this._rg,this._sex,this._estciv
     }
     imprimirDadosPessoais(){
         console.log( this.id,
@@ -34,7 +34,7 @@ class Pessoa {
             this.snome,
             this.datanasc,
             this.cel,
-            this.email,
+            this.rg,
             this.sex,
             this.estciv);
     }
@@ -49,7 +49,7 @@ Model
  // extends Pessoa
 class Endereco{
     constructor(cep,rua,num,comp,bairro,city,est){
-        //super(cpf,nome,snome,datanasc,cel,email,sex,estciv);
+        //super(cpf,nome,snome,datanasc,cel,rg,sex,estciv);
         this._cep = cep,
         this._rua = rua,
         this._num = num,
@@ -82,6 +82,13 @@ class Endereco{
             this.bairro,
             this.city,
             this.est);
+    }
+}
+
+class Login{
+    constructor(id,senha){
+        this._id = id;
+        this._senha = senha;
     }
 }
 

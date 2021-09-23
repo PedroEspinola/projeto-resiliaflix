@@ -9,7 +9,7 @@ function pegaDados(id){
         $('#rdatanasc').val(dados[0]._datanasc).prop('disabled', false);
         $('#rcpf').val(dados[0]._id);
         $('#rcel').val(dados[0]._cel).prop('disabled', false);
-        $('#remail').val(dados[0]._email).prop('disabled', false);
+        $('#rg').val(dados[0]._rg)
         $('#rsex').val(dados[0]._sex).prop('disabled', false);
         $('#restciv').val(dados[0]._estciv).prop('disabled', false);
         $('#rcep').val(dados[1]._cep).prop('disabled', false);
@@ -19,6 +19,9 @@ function pegaDados(id){
         $('#rbairro').val(dados[1]._bairro).prop('disabled', false);
         $('#rcity').val(dados[1]._city).prop('disabled', false);
         $('#rest').val(dados[1]._est).prop('disabled', false);
+        $('#rid').val(dados[2]._id)
+        $('#senha').val(dados[2]._senha).prop('disabled', false);
+        $('#csenha').val(dados[2]._senha).prop('disabled', false);
     }else{
         $('#tituloErro').html('Usuario Não Encontrado!');
         $('#msgErro').html('Verifique se o CPF foi digitado corretamente!')
@@ -27,12 +30,13 @@ function pegaDados(id){
 }
 function validaInput(...variaveis){
     for(let i=0 ; i <= variaveis.length ; i++){
-        if(variaveis[i] == ''){
-            $('#tituloErro').html('Preencha todos os Campos');
-            $('#msgErro').html('Verifique se todos os campos foram preenchidos corretamente!!')
-            $('#showModalError').modal('show');
+        if(variaveis[i] == '' || variaveis[i] == null){
+          $('#tituloErro').html('Preencha todos os Campos');
+          $('#msgErro').html('Verifique se todos os campos foram preenchidos!!')
+          $('#showModalError').modal('show');
           return false;
         }else{
+            
             return true;
         }
     }
@@ -40,24 +44,25 @@ function validaInput(...variaveis){
 /*
 controler
 */
-function criarCadastro(cpf,nome,snome,datanasc,cel,email,sex,estciv,cep,rua,num,comp,bairro,city,est){
+function criarCadastro(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,num,comp,bairro,city,est,id,senha){
      
     const cadastro = []
-    const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, email, sex, estciv);
-
+    const pessoa = new Pessoa(cpf, nome, snome, datanasc, cel, rg, sex, estciv);
     const endereco = new Endereco(cep, rua, num, comp, bairro, city, est);
-
-    cadastro.push(pessoa, endereco);
+    const log = new Login(id,senha)
+    console.log(pessoa,endereco,log)
+    cadastro.push(pessoa, endereco,log);
 
    // console.log(cadastro, 'eu sou a constante');
-    let id = pessoa._id;
-    let db = new Db();
+    id = log._id;
+    db = new Db();
     db.gravar(id, cadastro)
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
-    $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
+    $('#msgSuccess').html(`Seu Usuario é:${id} \n Sua Senha é: \n ${senha}`);
     $('#showModalSuccess').modal('show');
 }
+
 function excluirCadastro(id){
     let db = new Db()
     db.delete(id)

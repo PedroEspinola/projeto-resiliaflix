@@ -1,8 +1,6 @@
 class Db {
     consultar(id) {
         try {
-            id = parseInt(id)
-            console.log(id)
             const cadastro = JSON.parse(localStorage.getItem(id))
             if (cadastro == null) {
                 $('#tituloErro').html('Usuario Não encontrado!');

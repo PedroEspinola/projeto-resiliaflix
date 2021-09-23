@@ -45,4 +45,24 @@ option{
   .modal{
     margin-top: 50%;
   }
+  .fixed-bottom{
+      position: relative!important;
+      right: 0;
+      bottom: auto!important;
+      left: auto!important;
+  }
+
+}
+
+#id:focus{
+    box-shadow: 0 0 25px green!important;
+}
+#rid:focus{
+    box-shadow: 0 0 25px green!important;
+}
+#senha:focus{
+    box-shadow: 0 0 25px green!important;
+}
+#csenha:focus{
+    box-shadow: 0 0 25px green!important;
 }
