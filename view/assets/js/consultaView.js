@@ -88,7 +88,7 @@ function limparCampos(){
     $('#rcel').val('');
     $('#rsex').val('');
     $('#rcpf').val('');
-    $('#remail').val('');
+    $('#rg').val('');
     $('#restciv').val('');
     $('#rcep').val('');
     $('#rrua').val('');
@@ -105,7 +105,14 @@ function limparCampos(){
 /*view*/
 function pesquisar(){
     let id = $('#id').val();
-    pegaDados(id);
+    
+    if(id !== ''){
+        pegaDados(id);
+    }else{
+        $('#tituloErro').html('Usuario Não Encontrado!');
+        $('#msgErro').html('Verifique se o Email foi digitado corretamente!')
+        $('#showModalError').modal('show');
+    }
     
 }
 
@@ -130,7 +137,7 @@ function confirmar(){
 
    let validado = validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha);
    console.log(validado)
-   if(validado !== '' || validado !== false){
+   if(validado !== '' && validado !== false){
     limparCampos()
     $('#tituloSuccess').html('Usuario Cadastrado!');
     $('#msgSuccess').html('O Usuario foi cadastrado com Sucesso!');
@@ -144,21 +151,21 @@ function confirmar(){
 /*view*/
 function atualizar(){
     
-    let nome = $('#nome').val();
-    let snome =  $('#snome').val();
-    let datanasc = $('#datanasc').val();
-    let cel = $('#cel').val();
-    let sex = $('#sex').val();
-    let cpf = $('#cpf').val();
+    let nome = $('#rnome').val();
+    let snome =  $('#rsnome').val();
+    let datanasc = $('#rdatanasc').val();
+    let cel = $('#rcel').val();
+    let sex = $('#rsex').val();
+    let cpf = $('#rcpf').val();
     let rg = $('#rg').val();
-    let estciv = $('#estciv').val();
-    let cep = $('#cep').val();
-    let rua = $('#rua').val();
-    let num = $('#num').val();
-    let comp = $('#comp').val();
-    let bairro = $('#bairro').val();
-    let city = $('#city').val();
-    let est = $('#est').val();
+    let estciv = $('#restciv').val();
+    let cep = $('#rcep').val();
+    let rua = $('#rrua').val();
+    let num = $('#rnum').val();
+    let comp = $('#rcomp').val();
+    let bairro = $('#rbairro').val();
+    let city = $('#rcity').val();
+    let est = $('#rest').val();
     let id = $('#id').val();
     let senha = $('#senha').val();
     
