@@ -27,6 +27,8 @@ function renderizarFilme() { // renderização dos dados API
         $('#direcao').html(filme.getDirecao());
         $('#duracao').html(filme.getDuracao());
         $('#genero').html(filme.getGenero());
+    }).fail((error)=>{
+        console.log(error)
     })
 }
 

@@ -19,7 +19,7 @@ main {
     padding: 50px;
     border-radius: 30px;
     margin-top: 20vh;
-    /* color: white; */
+    margin-bottom: 40px;
     background-color: none;
 }
 
@@ -39,10 +39,13 @@ body,
 main {
     background: #1B1B1B;
 }
-label{
+
+label {
     color: white;
 }
-#cpf,#senha{
+
+#cpf,
+#senha {
     background: none;
     border: 2px solid #f3235f;
     color: white
@@ -63,7 +66,7 @@ form> a:hover{
 }
 
 @media (max-width: 480px) {
-    .modal{
+    .modal {
         margin-top: 50%;
     }
 }
