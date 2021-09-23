@@ -19,6 +19,7 @@
 }
 html{
     overflow-x:hidden;
+    
 }   
 
 .background-corpo{
@@ -150,12 +151,8 @@ html{
     .margin-carrossel{
         margin-top: 5rem;
     }
-    .media-footer{
-        display: flex;
-        flex-direction: column;
-    }
-    .div-media{
-        width: 100%!important;
+    #hidden{
+        display: none;
     }
     .nav-media{
         flex-direction: column!important;
