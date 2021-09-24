@@ -29,14 +29,14 @@ document.getElementById("btnCEP").addEventListener("click", function(event){
     pesquisaCEP()
 });
 
-$('#rid').focusin(function (){
+$('#id').focusin(function (){
     let efocus = document.createElement('p');
     efocus.setAttribute('id', 'efocus');
     efocus.style.color = 'green';
     efocus.innerHTML = 'Este sera seu usuário';
     document.getElementById('demail').appendChild(efocus);
 })
-$('#rid').focusout(function (){
+$('#id').focusout(function (){
     $('#efocus').remove()
 })
 

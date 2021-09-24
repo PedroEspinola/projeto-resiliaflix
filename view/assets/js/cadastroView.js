@@ -31,7 +31,7 @@ $('#senha').focusin(function (){
     efocus.innerHTML = 'Nunca revele sua senha';
     document.getElementById('dsenha').appendChild(efocus);
 })
-$('#dsenha').focusout(function (){
+$('#senha').focusout(function (){
     $('#efocus').remove()
 })
 
@@ -42,11 +42,12 @@ $('#csenha').focusin(function (){
     efocus.innerHTML = 'Nunca revele sua senha';
     document.getElementById('dcsenha').appendChild(efocus);
 })
-$('#dcsenha').focusout(function (){
+$('#csenha').focusout(function (){
+    $('#efocus').remove()
     $('#efocus').remove()
 })
 
-$('#dcsenha').focusout(function (){
+$('#csenha').focusout(function (){
     let s1 = $('#senha').val();
     let s2 = $('#csenha').val();
 
