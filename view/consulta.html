@@ -73,9 +73,9 @@
             <form action="">
               
               <div class="row justify-content-center"><!--Info pessoais-->
-                <div class="form-group col-12 col-md-6 mb-3">
+                <div class="form-group col-12 col-md-6 mb-3" id="valido">
                     <label for="id"> Digite seu Email para consulta:</label>
-                    <input class="form-control" type="email" name="id" id="id" placeholder="exemplo@exemplar.com" required autofocus size="50" maxlength="50">
+                    <input class="form-control" type="email" name="id" id="id" placeholder="exemplo@exemplar.com" required autofocus size="50" maxlength="50" onblur="validacaoEmail(this)">
                   </div>
 
                   <div class="col-12 col-md-6 mb-3 mt-4" >
@@ -247,7 +247,7 @@
               <p id="msgErro"></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" id="btnErrorModal" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
             </div>
           </div>
         </div>
