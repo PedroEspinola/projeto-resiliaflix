@@ -51,9 +51,14 @@ $('#dcsenha').focusout(function (){
     let s2 = $('#csenha').val();
 
     if(s1 !== s2){
+        console.log('chegei')
+        $('#senha').val('')
         $('#tituloErro').html('Erro!');
-            $('#msgErro').html(`As senhas não são identicas`);
-            $('#showModalError').modal('show');
+        $('#msgErro').html(`As senhas não são identicas`);
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#senha').focus()
+        })
     }
 })
 

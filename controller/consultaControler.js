@@ -1,3 +1,28 @@
+function validacaoEmail(email) {
+    usuario = email.value.substring(0, email.value.indexOf("@"));
+    dominio = email.value.substring(email.value.indexOf("@")+ 1, email.value.length);
+    
+    if ((usuario.length >=1) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (dominio.search(".")!=-1) &&
+        (dominio.indexOf(".") >=1)&&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            let efocus = document.createElement('p');
+            efocus.setAttribute('id', 'efocus');
+            efocus.style.color = 'green';
+            efocus.innerHTML = 'Email valido!';
+            document.getElementById('valido').appendChild(efocus);
+    }
+    else{
+        $('#tituloErro').html('Email Invalido!');
+        $('#msgErro').html(`Preencha o Email corretamente com @ e .com`);
+        $('#showModalError').modal('show');
+    }
+    }
 /*controler*/
 function pegaDados(id){
     let db = new Db();
@@ -30,6 +55,146 @@ function pegaDados(id){
 }
 
 
+function validaInput(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,bairro,city,est,id,senha){
+    if(cpf == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rcpf').focus()
+        })
+        return false
+    }
+    if(nome == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rnome').focus()
+        })
+        return false
+    }
+    if(snome == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rsnome').focus()
+        })
+        return false
+    }
+    if(datanasc == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rdatanasc').focus()
+        })
+        return false
+    }
+    if(cel == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rcel').focus()
+        })
+        return false
+    }
+    if(rg == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rg').focus()
+        })
+        return false
+    }
+    if(sex == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rsex').focus()
+        })
+        return false
+    }
+    if(estciv == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#restciv').focus()
+        })
+        return false
+    }
+    if(cep == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rcep').focus()
+        })
+        return false
+    }
+    if(rua == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rrua').focus()
+        })
+        return false
+    }
+    if(bairro == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rbairro').focus()
+        })
+        return false
+    }
+    if(city == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rcity').focus()
+        })
+        return false
+    }
+    if(est == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#rest').focus()
+        })
+        return false
+    }
+    if(id == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#id').focus()
+        })
+        return false
+    }
+    if(senha == ''){
+        $('#tituloErro').html('Campo Obrigatorio!');
+        $('#msgErro').html('Verifique se o campo foi preenchido corretamente!')
+        $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#senha').focus()
+        })
+        return false
+    }
+    return true;
+}
+
+/*
 function validaInput(...variaveis){
     console.log(variaveis)
     for(let i=0 ; i <= variaveis.length ; i++){
@@ -46,7 +211,7 @@ function validaInput(...variaveis){
         }
     }
 }
-
+*/
 
 function criarCadastro(cpf,nome,snome,datanasc,cel,rg,sex,estciv,cep,rua,num,comp,bairro,city,est,id,senha){
      
