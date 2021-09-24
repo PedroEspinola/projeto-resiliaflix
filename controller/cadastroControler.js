@@ -21,6 +21,9 @@ function validacaoEmail(email) {
         $('#tituloErro').html('Email Invalido!');
         $('#msgErro').html(`Preencha o Email corretamente com @ e .com`);
         $('#showModalError').modal('show');
+        $('#btnErrorModal').on('click',function(){
+            $('#id').focus()
+        })
     }
     }
 
