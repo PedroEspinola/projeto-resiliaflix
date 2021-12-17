@@ -15,8 +15,8 @@
 
 # Pontos de destaque:
  * O projeto conta com CRUD que simula processo completo de cadastro de usuários utilizando armazenamento em LocalStorage que possibilita validação de Login e Senha.
- * Através de webcomponente desenvolvodo em JS, é possível ao usuário avaliar qualquer filme que é apresentado na plataforma, para o armazenamaento de tal dado foi utilizado LocalStorage.
- * A arquitetura do projeto foi pensada e desenvolvida em padrão MVC, tendo organização de acordo com a separação de arquivos em model, view e controlller. Otimizando revisões, alterações e o desempenho geral da equipe.
+ * Através de webcomponente desenvolvido em JS, é possível ao usuário avaliar qualquer filme que é apresentado na plataforma, para o armazenamento de tal dado foi utilizado LocalStorage.
+ * A arquitetura do projeto foi pensada e desenvolvida em padrão MVC, tendo organização de acordo com a separação de arquivos em model, view e controller. Otimizando revisões, alterações e o desempenho geral da equipe.
   ![Página de login](https://github.com/PedroEspinola/projeto-resiliaflix/blob/master/view/assets/img/Readme/login.PNG)
   ![Página de cadastro](https://github.com/PedroEspinola/projeto-resiliaflix/blob/master/view/assets/img/Readme/crud.PNG)
   ![Página de informações de filmes](https://github.com/PedroEspinola/projeto-resiliaflix/blob/master/view/assets/img/Readme/Webcomponte%20e%20info.png)
